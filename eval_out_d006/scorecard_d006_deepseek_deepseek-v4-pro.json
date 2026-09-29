@@ -1,0 +1,88 @@
+{
+  "scorer_version": "d006-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 0.9307,
+      "n": 750,
+      "hits": 698,
+      "wilson_95": [
+        0.9102,
+        0.9467
+      ]
+    }
+  },
+  "false_break_rate": {
+    "pooled": {
+      "accuracy": 0.0303,
+      "n": 264,
+      "hits": 8,
+      "wilson_95": [
+        0.0154,
+        0.0586
+      ]
+    }
+  },
+  "attribution_category_accuracy": {
+    "pooled": {
+      "accuracy": 0.9095,
+      "n": 442,
+      "hits": 402,
+      "wilson_95": [
+        0.8791,
+        0.9328
+      ]
+    }
+  },
+  "field_accuracy": {
+    "pooled": {
+      "accuracy": 0.9027,
+      "n": 442,
+      "hits": 399,
+      "wilson_95": [
+        0.8715,
+        0.927
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.2398,
+      "n": 442,
+      "hits": 106,
+      "wilson_95": [
+        0.2024,
+        0.2818
+      ]
+    }
+  },
+  "substitution_validity": {
+    "pooled": {
+      "accuracy": 0.6687,
+      "n": 486,
+      "hits": 325,
+      "wilson_95": [
+        0.6257,
+        0.7091
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.0556,
+      "n": 486,
+      "hits": 27,
+      "wilson_95": [
+        0.0385,
+        0.0796
+      ]
+    }
+  },
+  "model": "deepseek/deepseek-v4-pro",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-006-v1.0.json",
+  "prompt_version": "d006-prompt-v1.0",
+  "sampling": "temperature=0.6, top_p=0.95"
+}

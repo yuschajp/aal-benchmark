@@ -1,0 +1,98 @@
+{
+  "dataset": "AAL-D-008",
+  "n_cases": 250,
+  "n_runs": 3,
+  "n_observations": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "accuracy": 1.0,
+    "n": 750,
+    "wilson_95": [
+      0.9949039692158141,
+      1.0
+    ]
+  },
+  "attribution_accuracy": {
+    "accuracy": 1.0,
+    "n": 750,
+    "wilson_95": [
+      0.9949039692158141,
+      1.0
+    ]
+  },
+  "value_accuracy": {
+    "accuracy": 1.0,
+    "n": 597,
+    "wilson_95": [
+      0.9936063015610104,
+      1.0
+    ]
+  },
+  "false_positive_rate": {
+    "rate": 0.0,
+    "n_trap_observations": 69,
+    "wilson_95": [
+      0.0,
+      0.05273909414400562
+    ]
+  },
+  "attribution_flip_rate": {
+    "rate": 0.0,
+    "flipped": 0,
+    "eligible_cases": 250
+  },
+  "brier_score": 0.008188533333333331,
+  "per_category_attribution": {
+    "RL-DIS-ACCRUAL": {
+      "accuracy": 1.0,
+      "n": 60
+    },
+    "RL-DIS-BENCHRATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-DIS-CORPACTION": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-DAYCOUNT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-FEESPLIT": {
+      "accuracy": 1.0,
+      "n": 48
+    },
+    "RL-DIS-HAIRCUT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-INSUFFICIENT-DATA": {
+      "accuracy": 1.0,
+      "n": 84
+    },
+    "RL-DIS-NOTIONAL": {
+      "accuracy": 1.0,
+      "n": 72
+    },
+    "RL-DIS-RECALL": {
+      "accuracy": 1.0,
+      "n": 96
+    },
+    "RL-DIS-SETTLEDATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-NO-DISPUTE": {
+      "accuracy": 1.0,
+      "n": 69
+    }
+  },
+  "model": "claude-opus-5-5",
+  "condition": "A",
+  "value_flip_rate": {
+    "rate": 0.0,
+    "flipped": 0,
+    "eligible_cases": 199
+  }
+}

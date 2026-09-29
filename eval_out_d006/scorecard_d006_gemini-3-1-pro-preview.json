@@ -1,0 +1,88 @@
+{
+  "scorer_version": "d006-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_break_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "attribution_category_accuracy": {
+    "pooled": {
+      "accuracy": 0.9753,
+      "n": 486,
+      "hits": 474,
+      "wilson_95": [
+        0.9573,
+        0.9858
+      ]
+    }
+  },
+  "field_accuracy": {
+    "pooled": {
+      "accuracy": 0.9753,
+      "n": 486,
+      "hits": 474,
+      "wilson_95": [
+        0.9573,
+        0.9858
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.5782,
+      "n": 486,
+      "hits": 281,
+      "wilson_95": [
+        0.5338,
+        0.6213
+      ]
+    }
+  },
+  "substitution_validity": {
+    "pooled": {
+      "accuracy": 0.9177,
+      "n": 486,
+      "hits": 446,
+      "wilson_95": [
+        0.8899,
+        0.939
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.8601,
+      "n": 486,
+      "hits": 418,
+      "wilson_95": [
+        0.8264,
+        0.8881
+      ]
+    }
+  },
+  "model": "gemini-3.1-pro-preview",
+  "provider": "google",
+  "dataset": "datasets/AAL-D-006-v1.0.json",
+  "prompt_version": "d006-prompt-v1.0",
+  "sampling": "temperature=0.0"
+}

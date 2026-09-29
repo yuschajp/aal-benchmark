@@ -1,0 +1,648 @@
+{
+  "D-002": {
+    "value_field": "amount_correct",
+    "models": [
+      {
+        "model": "gpt-4o-2024-08-06",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 1,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 124
+          },
+          "value": {
+            "flip_rate": 1.6129032258064515,
+            "flipped": 2,
+            "eligible": 124
+          }
+        }
+      }
+    ]
+  },
+  "D-003": {
+    "value_field": "numeric_correct",
+    "models": [
+      {
+        "model": "claude-sonnet-4-6",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 10,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 246
+          },
+          "category": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 158
+          },
+          "value": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 70
+          }
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 6,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 248
+          },
+          "category": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 160
+          },
+          "value": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 72
+          }
+        }
+      },
+      {
+        "model": "gemini-2-5-pro",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 6.790123456790123,
+            "flipped": 11,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 6.944444444444445,
+            "flipped": 5,
+            "eligible": 72
+          }
+        }
+      },
+      {
+        "model": "gpt-4o-2024-08-06",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 1.2345679012345678,
+            "flipped": 2,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 1.3888888888888888,
+            "flipped": 1,
+            "eligible": 72
+          }
+        }
+      }
+    ]
+  },
+  "D-004": {
+    "value_field": "value_correct",
+    "models": [
+      {
+        "model": "claude-sonnet-4-6",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 2.4691358024691357,
+            "flipped": 4,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 7.4074074074074066,
+            "flipped": 12,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 2.0,
+            "flipped": 5,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 8.024691358024691,
+            "flipped": 13,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 15.432098765432098,
+            "flipped": 25,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "gemini-2-5-pro",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 6.4,
+            "flipped": 16,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 8.024691358024691,
+            "flipped": 13,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 16.049382716049383,
+            "flipped": 26,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "gpt-4o-2024-08-06",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 1.2345679012345678,
+            "flipped": 2,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 3.7037037037037033,
+            "flipped": 6,
+            "eligible": 162
+          }
+        }
+      }
+    ]
+  },
+  "D-006": {
+    "value_field": "value_correct",
+    "models": [
+      {
+        "model": "claude-opus-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 2.4,
+            "flipped": 6,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 3.7037037037037033,
+            "flipped": 6,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 7.4074074074074066,
+            "flipped": 12,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.4,
+            "flipped": 1,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 7.4074074074074066,
+            "flipped": 12,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 34.5679012345679,
+            "flipped": 56,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "deepseek_deepseek-v4-pro",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 8.0,
+            "flipped": 20,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 20.37037037037037,
+            "flipped": 33,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 29.01234567901235,
+            "flipped": 47,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "gemini-3-1-pro-preview",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 1.2345679012345678,
+            "flipped": 2,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 9.876543209876543,
+            "flipped": 16,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "gpt-5-6-sol",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 3.0864197530864197,
+            "flipped": 5,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 26.543209876543212,
+            "flipped": 43,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "meta_muse-glimmer-30b",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 4.8,
+            "flipped": 12,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 17.901234567901234,
+            "flipped": 29,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 12.345679012345679,
+            "flipped": 20,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "meta_muse-spark-1-2",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 15.432098765432098,
+            "flipped": 25,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 24.691358024691358,
+            "flipped": 40,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "moonshotai_kimi-k3",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.4,
+            "flipped": 1,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 8.024691358024691,
+            "flipped": 13,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 20.37037037037037,
+            "flipped": 33,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "x-ai_grok-4-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 3.7037037037037033,
+            "flipped": 6,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 6.172839506172839,
+            "flipped": 10,
+            "eligible": 162
+          }
+        }
+      }
+    ]
+  },
+  "D-007": {
+    "value_field": "value_correct",
+    "models": [
+      {
+        "model": "claude-opus-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 81,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 223
+          },
+          "category": {
+            "flip_rate": 1.3986013986013985,
+            "flipped": 2,
+            "eligible": 143
+          },
+          "value": {
+            "flip_rate": 4.195804195804196,
+            "flipped": 6,
+            "eligible": 143
+          }
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 44,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 236
+          },
+          "category": {
+            "flip_rate": 22.727272727272727,
+            "flipped": 35,
+            "eligible": 154
+          },
+          "value": {
+            "flip_rate": 21.428571428571427,
+            "flipped": 33,
+            "eligible": 154
+          }
+        }
+      },
+      {
+        "model": "deepseek_deepseek-v4-pro",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 194,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 186
+          },
+          "category": {
+            "flip_rate": 15.0,
+            "flipped": 18,
+            "eligible": 120
+          },
+          "value": {
+            "flip_rate": 37.5,
+            "flipped": 45,
+            "eligible": 120
+          }
+        }
+      },
+      {
+        "model": "gemini-3-1-pro-preview",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 253,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 166
+          },
+          "category": {
+            "flip_rate": 1.9801980198019802,
+            "flipped": 2,
+            "eligible": 101
+          },
+          "value": {
+            "flip_rate": 1.9801980198019802,
+            "flipped": 2,
+            "eligible": 101
+          }
+        }
+      },
+      {
+        "model": "gpt-5-6-sol",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 1.8518518518518516,
+            "flipped": 3,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 7.4074074074074066,
+            "flipped": 12,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "gpt-6-astra",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 0,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 250
+          },
+          "category": {
+            "flip_rate": 1.2345679012345678,
+            "flipped": 2,
+            "eligible": 162
+          },
+          "value": {
+            "flip_rate": 3.0864197530864197,
+            "flipped": 5,
+            "eligible": 162
+          }
+        }
+      },
+      {
+        "model": "meta_muse-spark-1-2",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 243,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 169
+          },
+          "category": {
+            "flip_rate": 14.423076923076922,
+            "flipped": 15,
+            "eligible": 104
+          },
+          "value": {
+            "flip_rate": 16.346153846153847,
+            "flipped": 17,
+            "eligible": 104
+          }
+        }
+      },
+      {
+        "model": "moonshotai_kimi-k3",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 130,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 207
+          },
+          "category": {
+            "flip_rate": 20.0,
+            "flipped": 26,
+            "eligible": 130
+          },
+          "value": {
+            "flip_rate": 8.461538461538462,
+            "flipped": 11,
+            "eligible": 130
+          }
+        }
+      },
+      {
+        "model": "x-ai_grok-4-5",
+        "n_cases": 250,
+        "n_runs": 750,
+        "n_errors": 348,
+        "rates": {
+          "detection": {
+            "flip_rate": 0.0,
+            "flipped": 0,
+            "eligible": 134
+          },
+          "category": {
+            "flip_rate": 12.658227848101266,
+            "flipped": 10,
+            "eligible": 79
+          },
+          "value": {
+            "flip_rate": 13.924050632911392,
+            "flipped": 11,
+            "eligible": 79
+          }
+        }
+      }
+    ]
+  }
+}

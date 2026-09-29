@@ -1,0 +1,117 @@
+{
+  "dataset": "datasets/AAL-D-008-v0.1.json",
+  "n_cases": 250,
+  "n_runs": 3,
+  "n_observations": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "accuracy": 1.0,
+    "n": 750,
+    "wilson_95": [
+      0.9949039692158141,
+      1.0
+    ]
+  },
+  "attribution_accuracy": {
+    "accuracy": 0.9453333333333334,
+    "n": 750,
+    "wilson_95": [
+      0.9266778051861738,
+      0.9594499967287112
+    ]
+  },
+  "value_accuracy": {
+    "accuracy": 0.931323283082077,
+    "n": 597,
+    "wilson_95": [
+      0.9081560346749392,
+      0.9489750294857314
+    ]
+  },
+  "false_positive_rate": {
+    "rate": 0.0,
+    "n_trap_observations": 69,
+    "wilson_95": [
+      0.0,
+      0.05273909414400562
+    ]
+  },
+  "attribution_flip_rate": {
+    "rate": 0.048,
+    "flipped": 12,
+    "eligible_cases": 250
+  },
+  "brier_score": 0.05468666666666667,
+  "per_category_attribution": {
+    "RL-DIS-ACCRUAL": {
+      "accuracy": 1.0,
+      "n": 60
+    },
+    "RL-DIS-BENCHRATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-DIS-CORPACTION": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-DAYCOUNT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-FEESPLIT": {
+      "accuracy": 1.0,
+      "n": 48
+    },
+    "RL-DIS-HAIRCUT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-INSUFFICIENT-DATA": {
+      "accuracy": 1.0,
+      "n": 84
+    },
+    "RL-DIS-NOTIONAL": {
+      "accuracy": 1.0,
+      "n": 72
+    },
+    "RL-DIS-RECALL": {
+      "accuracy": 0.5729166666666666,
+      "n": 96
+    },
+    "RL-DIS-SETTLEDATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-NO-DISPUTE": {
+      "accuracy": 1.0,
+      "n": 69
+    }
+  },
+  "model": "gpt-5.6-sol",
+  "provider": "openai",
+  "prompt_version": "d008-prompt-v0.1",
+  "sampling": "temperature=provider_default [endpoint rejected: temperature]",
+  "sampling_requested": "temperature=0.0",
+  "params_rejected_by_endpoint": [
+    "temperature"
+  ],
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 3.393,
+      "p95": 7.7,
+      "mean": 3.831,
+      "max": 18.324,
+      "total": 2873.2
+    },
+    "tokens": {
+      "prompt_mean": 1185.3,
+      "completion_mean": 186.0,
+      "reasoning_mean": 73.4,
+      "prompt_total": 888987,
+      "completion_total": 139527
+    },
+    "attempts_mean": 1.004
+  }
+}

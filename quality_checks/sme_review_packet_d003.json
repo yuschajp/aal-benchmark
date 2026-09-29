@@ -1,0 +1,917 @@
+{
+  "benchmark": "AAL-D-003-v1.0",
+  "generated": "2026-07-09",
+  "criteria": "spec section 8 gate 7: >=2 per distribution cell, all risk-5, all EXC-CORPACT, all multi-leg, 10% clean",
+  "n_cases": 144,
+  "cases": [
+    {
+      "case_id": "AAL-D-003-002",
+      "selected_for": [
+        "risk_5"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-004",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-005",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-012",
+      "selected_for": [
+        "cell:BBG/index/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-017",
+      "selected_for": [
+        "risk_5",
+        "corpact",
+        "cell:BBG/single_name/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-018",
+      "selected_for": [
+        "cell:Eurex/index/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-022",
+      "selected_for": [
+        "cell:BBG/single_name/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-023",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-027",
+      "selected_for": [
+        "cell:BBG/index/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-031",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-034",
+      "selected_for": [
+        "cell:BBG/single_name/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-038",
+      "selected_for": [
+        "cell:BBG/index/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-041",
+      "selected_for": [
+        "cell:BBG/index/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-044",
+      "selected_for": [
+        "risk_5"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-048",
+      "selected_for": [
+        "cell:BBG/index/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-050",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-051",
+      "selected_for": [
+        "multi_leg",
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-052",
+      "selected_for": [
+        "risk_5",
+        "corpact",
+        "cell:Eurex/single_stock/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-054",
+      "selected_for": [
+        "cell:Eurex/single_stock/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-055",
+      "selected_for": [
+        "cell:Eurex/single_stock/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-056",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-057",
+      "selected_for": [
+        "risk_5",
+        "cell:Eurex/single_stock/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-059",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-060",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-061",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-062",
+      "selected_for": [
+        "cell:BBG/single_name/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-064",
+      "selected_for": [
+        "risk_5"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-065",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-071",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-073",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-075",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-080",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-082",
+      "selected_for": [
+        "cell:BBG/single_name/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-083",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-084",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-088",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-090",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-091",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-092",
+      "selected_for": [
+        "risk_5",
+        "corpact"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-094",
+      "selected_for": [
+        "risk_5"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-096",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-097",
+      "selected_for": [
+        "risk_5",
+        "corpact",
+        "cell:BBG/single_name/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-098",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-099",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-100",
+      "selected_for": [
+        "cell:Eurex/single_stock/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-101",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-102",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-103",
+      "selected_for": [
+        "cell:CME/future/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-104",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-105",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-112",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-115",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-116",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-121",
+      "selected_for": [
+        "cell:Eurex/index/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-122",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-123",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-127",
+      "selected_for": [
+        "cell:CME/future/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-129",
+      "selected_for": [
+        "cell:CME/future/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-133",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-134",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-136",
+      "selected_for": [
+        "cell:Eurex/index/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-137",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-141",
+      "selected_for": [
+        "cell:Eurex/index/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-145",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-147",
+      "selected_for": [
+        "cell:Eurex/index/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-148",
+      "selected_for": [
+        "cell:CME/future/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-151",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-152",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-153",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-154",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-155",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-156",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-157",
+      "selected_for": [
+        "multi_leg",
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-158",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-159",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-160",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-161",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-162",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-163",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-164",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-165",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-166",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-167",
+      "selected_for": [
+        "risk_5",
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-168",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-169",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-170",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-171",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-172",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-173",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-174",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-175",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-176",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-177",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-178",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-179",
+      "selected_for": [
+        "multi_leg",
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-180",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-181",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-182",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-183",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-184",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-185",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-186",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-187",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-188",
+      "selected_for": [
+        "multi_leg",
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-189",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-190",
+      "selected_for": [
+        "risk_5",
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-191",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-192",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-193",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-194",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-195",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-196",
+      "selected_for": [
+        "multi_leg",
+        "cell:BBG/single_name/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-197",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-198",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-199",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-200",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-201",
+      "selected_for": [
+        "cell:CME/future/single/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-202",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-203",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-205",
+      "selected_for": [
+        "cell:CME/future/single/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-208",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-211",
+      "selected_for": [
+        "cell:Eurex/single_stock/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-214",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-217",
+      "selected_for": [
+        "cell:BBG/index/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-220",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-223",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-224",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-225",
+      "selected_for": [
+        "cell:Eurex/index/single/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-226",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-227",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-230",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-232",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-233",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/single_stock/spread/moderate"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-234",
+      "selected_for": [
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-235",
+      "selected_for": [
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-236",
+      "selected_for": [
+        "multi_leg",
+        "clean_10pct"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-237",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-239",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-240",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-241",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-243",
+      "selected_for": [
+        "multi_leg",
+        "cell:CME/future/spread/complex"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-245",
+      "selected_for": [
+        "multi_leg"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-246",
+      "selected_for": [
+        "multi_leg",
+        "cell:Eurex/index/spread/easy"
+      ]
+    },
+    {
+      "case_id": "AAL-D-003-247",
+      "selected_for": [
+        "clean_10pct"
+      ]
+    }
+  ]
+}

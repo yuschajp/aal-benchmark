@@ -1,0 +1,111 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 1,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 749,
+      "hits": 749,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 263,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0144
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.4856,
+      "n": 486,
+      "hits": 236,
+      "wilson_95": [
+        0.4414,
+        0.53
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.7531,
+      "n": 486,
+      "hits": 366,
+      "wilson_95": [
+        0.7129,
+        0.7893
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.8663,
+      "n": 486,
+      "hits": 421,
+      "wilson_95": [
+        0.8331,
+        0.8937
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 486,
+      "hits": 486,
+      "wilson_95": [
+        0.9922,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 749,
+      "hits": 749,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "model": "gpt-5.6-sol",
+  "provider": "openai",
+  "dataset": "datasets/AAL-D-007-v1.1.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=provider_default [endpoint rejected: temperature]",
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 5.581,
+      "p95": 11.98,
+      "mean": 6.246,
+      "max": 23.498,
+      "total": 4684.3
+    },
+    "tokens": {
+      "prompt_mean": 1551.9,
+      "completion_mean": 295.0,
+      "reasoning_mean": 202.9,
+      "prompt_total": 1162390,
+      "completion_total": 220947
+    },
+    "attempts_mean": 1.012
+  },
+  "sampling_requested": "temperature=0.0",
+  "params_rejected_by_endpoint": [
+    "temperature"
+  ],
+  "sampling_note": "The endpoint rejects a custom temperature: 'Unsupported value: temperature does not support 0.0 with this model. Only the default (1) value is supported.' Verified against the live API 2026-09-05. The driver's adaptive retry dropped the parameter, so this run used OpenAI's default sampling, NOT temperature=0.0. The original field was written from the command-line flag rather than from what was sent. Corrected 2026-09-05."
+}

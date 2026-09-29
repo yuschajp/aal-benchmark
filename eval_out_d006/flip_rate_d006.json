@@ -1,0 +1,145 @@
+{
+  "scorer_version": "d006-flip-v1.0.0",
+  "dataset": "AAL-D-006-v1.1",
+  "metric": "run-to-run flip rate (self-consistency across a model's own 3 runs)",
+  "generated_utc": "2026-09-13T16:10:54+00:00",
+  "n_models": 11,
+  "models": {
+    "claude-opus-5": {
+      "n_cases": 250,
+      "detect_flip": 6,
+      "detect_flip_pct": 2.4,
+      "category_eligible": 162,
+      "category_flip": 6,
+      "category_flip_pct": 3.7,
+      "value_eligible": 162,
+      "value_flip": 12,
+      "value_flip_pct": 7.4
+    },
+    "claude-sonnet-5": {
+      "n_cases": 250,
+      "detect_flip": 1,
+      "detect_flip_pct": 0.4,
+      "category_eligible": 162,
+      "category_flip": 12,
+      "category_flip_pct": 7.4,
+      "value_eligible": 162,
+      "value_flip": 56,
+      "value_flip_pct": 34.6
+    },
+    "deepseek_deepseek-v4-pro": {
+      "n_cases": 250,
+      "detect_flip": 20,
+      "detect_flip_pct": 8.0,
+      "category_eligible": 162,
+      "category_flip": 33,
+      "category_flip_pct": 20.4,
+      "value_eligible": 162,
+      "value_flip": 47,
+      "value_flip_pct": 29.0
+    },
+    "gemini-3-1-pro-preview": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 162,
+      "category_flip": 2,
+      "category_flip_pct": 1.2,
+      "value_eligible": 162,
+      "value_flip": 16,
+      "value_flip_pct": 9.9
+    },
+    "gemini-3-1-pro": {
+      "n_cases": 1,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 0,
+      "category_flip": 0,
+      "category_flip_pct": null,
+      "value_eligible": 0,
+      "value_flip": 0,
+      "value_flip_pct": null
+    },
+    "gpt-5-6-sol": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 162,
+      "category_flip": 5,
+      "category_flip_pct": 3.1,
+      "value_eligible": 162,
+      "value_flip": 43,
+      "value_flip_pct": 26.5
+    },
+    "meta_muse-glimmer-30b": {
+      "n_cases": 250,
+      "detect_flip": 12,
+      "detect_flip_pct": 4.8,
+      "category_eligible": 162,
+      "category_flip": 29,
+      "category_flip_pct": 17.9,
+      "value_eligible": 162,
+      "value_flip": 20,
+      "value_flip_pct": 12.3
+    },
+    "meta_muse-spark-1-2": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 162,
+      "category_flip": 25,
+      "category_flip_pct": 15.4,
+      "value_eligible": 162,
+      "value_flip": 40,
+      "value_flip_pct": 24.7
+    },
+    "moonshotai_kimi-k3": {
+      "n_cases": 250,
+      "detect_flip": 1,
+      "detect_flip_pct": 0.4,
+      "category_eligible": 162,
+      "category_flip": 13,
+      "category_flip_pct": 8.0,
+      "value_eligible": 162,
+      "value_flip": 33,
+      "value_flip_pct": 20.4
+    },
+    "qwen_qwen3-8-max": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 161,
+      "category_flip": 9,
+      "category_flip_pct": 5.6,
+      "value_eligible": 161,
+      "value_flip": 50,
+      "value_flip_pct": 31.1
+    },
+    "x-ai_grok-4-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "category_eligible": 162,
+      "category_flip": 6,
+      "category_flip_pct": 3.7,
+      "value_eligible": 162,
+      "value_flip": 10,
+      "value_flip_pct": 6.2
+    }
+  },
+  "summary": {
+    "detection_flip_pct_range": [
+      0.0,
+      8.0
+    ],
+    "category_flip_pct_range": [
+      1.2,
+      20.4
+    ],
+    "value_flip_pct_range": [
+      6.2,
+      34.6
+    ]
+  },
+  "notes": "category_eligible and value_eligible are per-model denominators: cases where the model had at least two non-error runs with a scoreable field. They vary by model because run errors reduce the number of scoreable runs. Compare each flip count against its own eligible denominator, not a fixed 250."
+}

@@ -1,0 +1,94 @@
+{
+  "dataset": "AAL-D-008",
+  "n_cases": 230,
+  "n_runs": 3,
+  "n_observations": 690,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "accuracy": 1.0,
+    "n": 690,
+    "wilson_95": [
+      0.9944632896038518,
+      0.9999999999999999
+    ]
+  },
+  "attribution_accuracy": {
+    "accuracy": 1.0,
+    "n": 690,
+    "wilson_95": [
+      0.9944632896038518,
+      0.9999999999999999
+    ]
+  },
+  "value_accuracy": {
+    "accuracy": 1.0,
+    "n": 537,
+    "wilson_95": [
+      0.9928969960890585,
+      1.0
+    ]
+  },
+  "false_positive_rate": {
+    "rate": 0.0,
+    "n_trap_observations": 69,
+    "wilson_95": [
+      0.0,
+      0.05273909414400562
+    ]
+  },
+  "attribution_flip_rate": {
+    "rate": 0.0,
+    "flipped": 0,
+    "eligible_cases": 230
+  },
+  "brier_score": 5.7971014492753725e-06,
+  "per_category_attribution": {
+    "RL-DIS-BENCHRATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-DIS-CORPACTION": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-DAYCOUNT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-FEESPLIT": {
+      "accuracy": 1.0,
+      "n": 48
+    },
+    "RL-DIS-HAIRCUT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-INSUFFICIENT-DATA": {
+      "accuracy": 1.0,
+      "n": 84
+    },
+    "RL-DIS-NOTIONAL": {
+      "accuracy": 1.0,
+      "n": 72
+    },
+    "RL-DIS-RECALL": {
+      "accuracy": 1.0,
+      "n": 96
+    },
+    "RL-DIS-SETTLEDATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-NO-DISPUTE": {
+      "accuracy": 1.0,
+      "n": 69
+    }
+  },
+  "model": "gpt-5.6-sol",
+  "condition": "B",
+  "value_flip_rate": {
+    "rate": 0.0,
+    "flipped": 0,
+    "eligible_cases": 179
+  }
+}

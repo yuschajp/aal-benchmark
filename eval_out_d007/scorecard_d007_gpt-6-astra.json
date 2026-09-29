@@ -1,0 +1,111 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.4486,
+      "n": 486,
+      "hits": 218,
+      "wilson_95": [
+        0.4049,
+        0.493
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.7243,
+      "n": 486,
+      "hits": 352,
+      "wilson_95": [
+        0.6829,
+        0.7621
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.6317,
+      "n": 486,
+      "hits": 307,
+      "wilson_95": [
+        0.5879,
+        0.6734
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 486,
+      "hits": 486,
+      "wilson_95": [
+        0.9922,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "model": "gpt-6-astra",
+  "provider": "openai",
+  "dataset": "datasets/AAL-D-007-v1.1.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=provider_default [endpoint rejected: temperature]",
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 2.926,
+      "p95": 5.582,
+      "mean": 3.304,
+      "max": 7.71,
+      "total": 2478.1
+    },
+    "tokens": {
+      "prompt_mean": 1551.6,
+      "completion_mean": 131.4,
+      "reasoning_mean": 31.4,
+      "prompt_total": 1163730,
+      "completion_total": 98580
+    },
+    "attempts_mean": 1.065
+  },
+  "sampling_requested": "temperature=0.0",
+  "params_rejected_by_endpoint": [
+    "temperature"
+  ],
+  "sampling_note": "GPT-6 Astra rejects the temperature parameter. The driver's adaptive retry dropped it on the first call (see astra_run.log line 1: '[adapt] dropping unsupported temperature') and for every call thereafter. This run therefore used OpenAI's provider-default sampling, NOT the temperature=0.0 held constant across the other eight models. Corrected 2026-09-05; the original field was written from the command-line flag rather than from what was sent."
+}

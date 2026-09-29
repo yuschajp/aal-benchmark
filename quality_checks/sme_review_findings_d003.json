@@ -1,0 +1,127 @@
+{
+  "benchmark": "AAL-D-003-v1.0.1",
+  "gate": 7,
+  "reviewer": "deep-reasoner (AI SME), human sign-off pending",
+  "reviewed": 144,
+  "passed": 141,
+  "flagged": 3,
+  "verdict": "NOT SHIPPABLE as v1.0. Two ship-blocking defects appear inside the 144-case review packet (148, 161) and three more instances of the same two templates exist dataset-wide outside the packet (007, 204, 216, 149). Both are generator-template bugs, not one-off typos, so they must be fixed at the generator and the whole dataset re-audited, then gate 2 (recompute) and a gate-7 spot re-review re-run. Everything else reviewed is strong: pricing is internally consistent (independent spot-checks matched the recompute), multi-leg structure is coherent (0 leg_index mismatches), risk-5 escalation is correctly floored per spec section 10, and venue conventions for BBG-OTC / Eurex are right. Fixes are localized -> a v1.0.1 regeneration of the affected clean-trap and EXC-GREEK/gamma cases should clear the gate.",
+  "flags": [
+    {
+      "case_id": "AAL-D-003-148",
+      "severity": "blocker",
+      "criterion": 3,
+      "issue": "FALSE CLEAN. CME ES option printed with multiplier 75.0 and strike 4216.67 = a 1.5:1 (3-for-2) stock-split adjustment (50 x 1.5 = 75; 6325 / 1.5 = 4216.67) applied to an equity-INDEX FUTURE. Index futures never undergo corporate actions and the ES option multiplier is a fixed contract spec ($50); a $75 multiplier and a fractional 4216.67 strike are impossible on an ES contract. Economics are internally conserved (strike x multiplier preserved, premium consistent) so gate-2 recompute passed, but any competent options quant would flag 'ES options are $50, this is not a valid contract' -- and be scored as a false positive because ground_truth says clean. This directly poisons the false-positive metric the whole clean pool exists to measure.",
+      "suggested_fix": "At the generator: restrict the post-split / corporate-action strike-and-multiplier adjustment template to underlying_kind in {single_name, single_stock} ONLY; never apply it to kind=index or kind=future. Regenerate 148 as an ordinary clean ES case (multiplier 50, standard 5- or 25-point strike). Add a generator invariant asserting multiplier in {20,50} for CME futures and in {5,10,100} for indices."
+    },
+    {
+      "case_id": "AAL-D-003-161",
+      "severity": "blocker",
+      "criterion": 2,
+      "issue": "PRIMARY EXCEPTION UNDETECTABLE AND MIS-RANKED. Ground truth sets primary = EXC-GREEK/gamma with counterparty=9e-05 vs internal=0.00189 (abs diff 0.0018), but the spec section 6 gamma tolerance is abs +/-0.005, so this difference is WITHIN tolerance -- a model applying the benchmark's own scoring rule correctly concludes the gammas match and (rightly) does not raise a gamma exception, yet is scored wrong. Worse, the same case carries a genuinely material EXC-STRIKE break on the same leg (522.5 vs 470.2, a $52.30 strike error) which is demoted to secondary. The material strike error is the defensible primary booking; a sub-tolerance gamma of noise magnitude cannot be the primary exception. Corrupts both category_identification and greek scoring.",
+      "suggested_fix": "Regenerate 161: either (a) make the strike the primary and drop/keep the gamma only if its injected magnitude exceeds tolerance, or (b) inject a gamma error >= 2x the 0.005 tolerance. Add a generator invariant: every injected EXC-GREEK magnitude must exceed the section 6 detection tolerance for that greek; and rank dual-exception primary by materiality (exposure / tolerance-multiples), not injection order."
+    },
+    {
+      "case_id": "AAL-D-003-103",
+      "severity": "minor",
+      "criterion": 1,
+      "issue": "CME settlement-convention inconsistency (representative case). This clean NQ option is booked settlement_method=Cash, while other clean CME future-option cases (105, 145, 148, 157, 188, 202, 230) are booked Physical, and the EXC-SETTLE CME cases (123, 129 correct=Cash; 167, 180 correct=Physical) split both ways too. CME options on ES/NQ futures exercise INTO a futures position; treating both Cash and Physical as the 'correct' convention for the same product within one benchmark is internally inconsistent and a CME-savvy buyer would notice. Not metric-corrupting (EXC-SETTLE scoring rewards detecting the CP-vs-IR disagreement, not judging venue truth), hence minor.",
+      "suggested_fix": "Pick one convention for CME options-on-futures (recommend 'Physical' = exercise into the future, or a distinct label like 'Into-future') and apply it uniformly across all CME clean and correct-side values; keep the opposite value only as the injected EXC-SETTLE error."
+    },
+    {
+      "case_id": "AAL-D-003-007",
+      "severity": "blocker",
+      "criterion": 3,
+      "issue": "OUTSIDE REVIEW PACKET -- dataset-wide instance of the same false-clean template as 148. Clean CME NQ option with multiplier 30.0 (= 20 x 1.5) and strike 14433.33: a 1.5:1 split applied to the NQ index future. Impossible contract; poisons the FP metric. Listed here because it is the same generator bug and ships in v1.0.",
+      "suggested_fix": "Same generator fix as 148 (restrict split/corp-action adjustment to single names). Regenerate as standard clean NQ (multiplier 20)."
+    },
+    {
+      "case_id": "AAL-D-003-216",
+      "severity": "blocker",
+      "criterion": 3,
+      "issue": "OUTSIDE REVIEW PACKET -- same false-clean template. Clean CME ES option with multiplier 125.0 (= 50 x 2.5) and strike 2310.0: a 2.5:1 split applied to the ES index future. Impossible contract; poisons the FP metric.",
+      "suggested_fix": "Same generator fix as 148. Regenerate as standard clean ES (multiplier 50)."
+    },
+    {
+      "case_id": "AAL-D-003-204",
+      "severity": "blocker",
+      "criterion": 3,
+      "issue": "OUTSIDE REVIEW PACKET -- same false-clean template applied to a cash index. Clean BBG/OTC SPX Index option with multiplier 350.0 (= 100 x 3.5) and strike 1728.57: a 3.5:1 split applied to a cash equity index. Cash indices do not split and the SPX contract multiplier is 100. Impossible; poisons the FP metric.",
+      "suggested_fix": "Same generator fix: exclude kind=index from the split template. Regenerate as standard clean SPX (multiplier 100)."
+    },
+    {
+      "case_id": "AAL-D-003-149",
+      "severity": "blocker",
+      "criterion": 2,
+      "issue": "OUTSIDE REVIEW PACKET -- same undetectable-gamma flaw as 161. EXC-GREEK/gamma with counterparty=1e-05 vs internal=2e-05 (abs diff 1e-05), roughly 500x below the 0.005 gamma tolerance. The injected 'error' is pure numerical noise and cannot be detected under the benchmark's own scoring; scored against any correct model. Same generator bug; ships in v1.0.",
+      "suggested_fix": "Same generator fix as 161: enforce injected-magnitude > tolerance for all EXC-GREEK cases; regenerate 149."
+    },
+    {
+      "case_id": "AAL-D-003-011",
+      "severity": "minor",
+      "criterion": 1,
+      "issue": "OUTSIDE REVIEW PACKET. Clean NVDA single-name option with multiplier 350.0 (= 100 x 3.5) and strike 36.43 (= 127.5 / 3.5). Single names can split, so this is not impossible like 148/204, but a 3.5:1 ratio is not a real split convention and OCC does not represent a forward split as a 350-share multiplier (it keeps the 100 multiplier and adjusts strike + contract count, changing the deliverable only for odd ratios). A quant would find a 350 multiplier implausible. Minor because the mechanic (adjusted deliverable) at least exists for single names.",
+      "suggested_fix": "Constrain single-name split ratios to realistic values (2:1, 3:1, 4:1, 3:2, 2:3, 1:3) and use OCC-style adjusted-deliverable multipliers (e.g., 150 for 3:2) rather than arbitrary ratios like 3.5:1."
+    }
+  ],
+  "family_observations": [
+    "BLOCKER FAMILY 1 (clean-trap venue leakage): The 'post-split adjusted strike with conserved strike x multiplier' clean-trap template (batch 5) was applied indiscriminately across venues/kinds. Correct on single names/single-stocks (e.g., 054 SAP 3:2 -> mult 150, K 143.33 is a legitimate OCC adjusted-deliverable trap), but leaked onto products that never have corporate actions: CME futures (007, 148, 216) and cash indices (204). All four are clean and thus corrupt the false-positive metric. Exactly 4 such cases in the full 250 (bounded), plus 011 as a soft single-name variant. Fix = gate the template on underlying_kind and add a multiplier-domain invariant per venue.",
+    "BLOCKER FAMILY 2 (EXC-GREEK/gamma below tolerance): Gamma for the high-priced underlyings in this set is ~1e-4 to 2e-3, but the section 6 gamma tolerance is a flat abs 0.005. Consequence: realistic gamma perturbations (161: 0.0018; 149: 1e-05) are undetectable, while the only 'detectable' gamma cases in the dataset (003, 249) inject ~0.015 onto a true ~0.0006 -- a ~20x error no ops system would ever produce. The gamma sub-family is caught between realistic-but-undetectable and detectable-but-absurd. Recommend: inject gamma errors as a multiple (>=2x) of the tolerance AND concentrate gamma EXC-GREEK cases on lower-priced underlyings (e.g., NVDA/PG/XOM) where gamma is materially larger; or drop gamma from EXC-GREEK and reallocate those 16-category slots to delta/vega/theta where a fixed abs/rel tolerance is well-scaled. Delta/theta/rho/vega EXC-GREEK cases reviewed are all correctly detectable and realistic.",
+    "EXC-CORPACT vs EXC-MULT (acceptable, but note the fairness risk): The 10 single-name CORPACT cases present ONLY a multiplier discrepancy (plus derived total_premium) with NO explicit corporate-action indicator in the serialized input -- no event notice, no 'adjusted' flag, no split-ratio reference. A model must infer CORPACT purely from the multiplier being a non-round ratio (66.6667 = 2/3, 33.3333 = 1/3). This is a defensible tell and the spec's concentration rule (CORPACT->single-name, MULT->CME) makes the labels internally consistent, so I did not flag the 10 cases individually. But a competent model could reasonably answer EXC-MULT and lose credit. If the taxonomy split matters commercially, consider adding a light-touch corp-action reference line to the confirm (e.g., 'OCC memo #, ratio 2:3') so CORPACT is inferable rather than guessable. Placement audit passed: all 10 CORPACT are on BBG single_name / Eurex single_stock, all 6 EXC-MULT are on CME futures (ES $50 vs NQ $20 confusion -- realistic).",
+    "CORPACT direction realism (minor): several single-name CORPACT multipliers imply reverse splits (33.3333 = 1:3, 66.6667 = 2:3) on mega-caps that do not reverse-split (AAPL, GS, PG, LLY, META). The mechanic is a valid OCC construct and the break is coherent, but the fundamental direction is implausible for these names. Cosmetic; consider using forward-split adjusted deliverables (>=100) or lower-quality names for reverse-split scenarios.",
+    "Dual-exception primary ordering: the generator appears to assign 'primary' by injection order rather than materiality. This is only egregious in 161 (sub-tolerance gamma ranked above a $52 strike error), but the same logic could misrank future cases. Recommend ranking primary by materiality (exposure, or multiples-of-tolerance) so the primary is always the break a desk would book first.",
+    "PASSED cleanly and worth noting as strengths: (1) Pricing internal consistency -- independent Black-76/BSM spot-checks across all CME cases and samples of BBG/Eurex reproduced the printed premiums; every premium/tenor 'oddity' resolved to legitimate deep-ITM intrinsic value or to the injected-error side, matching the gate-2 recompute. (2) Multi-leg structure -- 0 of the multi-leg packet cases had a leg_index that did not sit on the actually-differing leg; calendars share strike/differ expiry, verticals share expiry/differ strikes, ratios carry unequal quantities, all correctly. (3) EXC-RATIO vs EXC-QTY is cleanly separated by spread_type (Ratio spreads -> EXC-RATIO; equal-leg verticals/calendars with a count typo -> EXC-QTY) -- no cause/symptom ambiguity. (4) risk_level: all 17 risk-5 cases justified per section 10 (EXC-PROD/CORPACT/SETTLE type floors, or exposure >= $2M). (5) 2026 tickers, spot/strike levels, vols, currencies, Eurex (single-stock American/physical/EUR, index European/cash/EUR, ODAX mult 5 / OESX mult 10) and BBG-OTC ISDA conventions all realistic. (6) The 8 explicitly-tagged clean_10pct cases (051,157,179,188,234,235,236,247) are all genuinely clean and realistic; the only false clean in the entire packet is 148.",
+    "Scope note: the packet's clean population is larger than the 8 clean_10pct tags -- 46 of the 144 reviewed cases are genuinely clean (the multi_leg and cell samples swept up 38 more). All 46 were checked since each feeds the false-positive metric; 45 are valid, 148 is the lone false clean."
+  ],
+  "resolution": {
+    "date": "2026-07-10",
+    "verified_by": "coordinator (AI SME agent unavailable \u2014 529s; all checks re-run inline)",
+    "resolved": [
+      {
+        "case_id": "AAL-D-003-148",
+        "check": "regenerated: ES mult 50, K 8950 \u2014 valid contract, clean"
+      },
+      {
+        "case_id": "AAL-D-003-007",
+        "check": "regenerated: NQ mult 20, K 24950 \u2014 valid contract, clean"
+      },
+      {
+        "case_id": "AAL-D-003-216",
+        "check": "regenerated: ES mult 50, K 3475 \u2014 valid contract, clean"
+      },
+      {
+        "case_id": "AAL-D-003-204",
+        "check": "regenerated: SPX mult 100 (deep-ITM trap instead of split), clean"
+      },
+      {
+        "case_id": "AAL-D-003-161",
+        "check": "gamma diff now above 2x section-6 threshold; all 16 EXC-GREEK verified detectable"
+      },
+      {
+        "case_id": "AAL-D-003-149",
+        "check": "same \u2014 greek re-push fix + hard assert"
+      },
+      {
+        "case_id": "AAL-D-003-103",
+        "check": "all 65 CME cases settle Physical (excl. settlement-under-test errors)"
+      },
+      {
+        "case_id": "AAL-D-003-011",
+        "check": "NVDA split now 4:1 (mult 400) \u2014 realistic ratio set {1.5,2,3,4}"
+      }
+    ],
+    "regression_scan": "38 input-changed cases: gate-2 recompute rerun, gate-6 Sonnet-5 re-check 38/38 detection 0/14 FP (+054 separately), all 6 new split traps single-name with conserved economics",
+    "fixes": [
+      "split traps gated to single names + realistic ratios",
+      "greek injection re-push >2x threshold + assert",
+      "CME settlement uniformly Physical",
+      "gate-1 invariant: future/index multiplier in venue base domain"
+    ]
+  },
+  "sign_off": {
+    "by": "owner",
+    "date": "2026-07-10",
+    "basis": "AI-SME full packet review + coordinator-verified fixes (v1.0.1) + gates 1-6",
+    "verdict": "shippable \u2014 eval runs authorized"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "scorer_version": "d006-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_break_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "attribution_category_accuracy": {
+    "pooled": {
+      "accuracy": 0.9835,
+      "n": 486,
+      "hits": 478,
+      "wilson_95": [
+        0.9679,
+        0.9916
+      ]
+    }
+  },
+  "field_accuracy": {
+    "pooled": {
+      "accuracy": 0.9835,
+      "n": 486,
+      "hits": 478,
+      "wilson_95": [
+        0.9679,
+        0.9916
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.3827,
+      "n": 486,
+      "hits": 186,
+      "wilson_95": [
+        0.3406,
+        0.4267
+      ]
+    }
+  },
+  "substitution_validity": {
+    "pooled": {
+      "accuracy": 0.8807,
+      "n": 486,
+      "hits": 428,
+      "wilson_95": [
+        0.8488,
+        0.9065
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.7984,
+      "n": 486,
+      "hits": 388,
+      "wilson_95": [
+        0.7604,
+        0.8316
+      ]
+    }
+  },
+  "model": "gpt-5.6-sol",
+  "provider": "openai",
+  "dataset": "datasets/AAL-D-006-v1.0.json",
+  "prompt_version": "d006-prompt-v1.0",
+  "sampling": "temperature=provider_default [endpoint rejected: temperature]",
+  "sampling_requested": "temperature=0.0",
+  "params_rejected_by_endpoint": [
+    "temperature"
+  ],
+  "sampling_note": "The endpoint rejects a custom temperature: 'Unsupported value: temperature does not support 0.0 with this model. Only the default (1) value is supported.' Verified against the live API 2026-09-05. The driver's adaptive retry dropped the parameter, so this run used OpenAI's default sampling, NOT temperature=0.0. The original field was written from the command-line flag rather than from what was sent. Corrected 2026-09-05."
+}

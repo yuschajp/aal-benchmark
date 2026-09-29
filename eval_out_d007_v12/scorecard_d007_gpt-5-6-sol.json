@@ -1,0 +1,108 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.6152,
+      "n": 486,
+      "hits": 299,
+      "wilson_95": [
+        0.5712,
+        0.6574
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.7387,
+      "n": 486,
+      "hits": 359,
+      "wilson_95": [
+        0.6979,
+        0.7758
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.858,
+      "n": 486,
+      "hits": 417,
+      "wilson_95": [
+        0.8242,
+        0.8863
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 486,
+      "hits": 486,
+      "wilson_95": [
+        0.9922,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "model": "gpt-5.6-sol",
+  "provider": "openai",
+  "dataset": "datasets/AAL-D-007-v1.2.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=provider_default",
+  "sampling_requested": "provider_default",
+  "params_rejected_by_endpoint": [],
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 4.111,
+      "p95": 10.538,
+      "mean": 5.798,
+      "max": 609.446,
+      "total": 4348.5
+    },
+    "tokens": {
+      "prompt_mean": 1579.6,
+      "completion_mean": 282.4,
+      "reasoning_mean": 190.3,
+      "prompt_total": 1184727,
+      "completion_total": 211787
+    },
+    "attempts_mean": 1.0
+  }
+}

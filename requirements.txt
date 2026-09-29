@@ -1,0 +1,6 @@
+# AAL benchmark harness — runtime dependencies
+# Derived from the actual imports across aal-benchmark/*.py (Sept 4, 2026).
+# Everything else the harness uses is stdlib. Python 3.9+ required for zoneinfo.
+
+anthropic
+openai

@@ -1,0 +1,84 @@
+{
+  "scorer_version": "d007-flip-v1.1.0",
+  "dataset": "AAL-D-007-v1.1",
+  "metric": "run-to-run flip rate (self-consistency across a model's own 3 runs)",
+  "generated_utc": "2026-09-02T00:32:48+00:00",
+  "n_models": 8,
+  "models": {
+    "gpt-5-6-sol": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 9,
+      "value_flip_pct": 5.6
+    },
+    "claude-opus-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 15,
+      "value_flip_pct": 9.3
+    },
+    "claude-sonnet-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 29,
+      "value_flip_pct": 17.9
+    },
+    "gemini-3-1-pro-preview": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 15,
+      "value_flip_pct": 9.3
+    },
+    "x-ai_grok-4-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 158,
+      "value_flip": 25,
+      "value_flip_pct": 15.8
+    },
+    "deepseek_deepseek-v4-pro": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 65,
+      "value_flip_pct": 40.1
+    },
+    "moonshotai_kimi-k3": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 158,
+      "value_flip": 22,
+      "value_flip_pct": 13.9
+    },
+    "meta_muse-spark-1-2": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 25,
+      "value_flip_pct": 15.4
+    }
+  },
+  "summary": {
+    "detection_flip_pct_range": [
+      0.0,
+      0.0
+    ],
+    "value_flip_pct_range": [
+      5.6,
+      40.1
+    ]
+  },
+  "notes": "value_eligible is the per-model denominator: cases where the model caught a real dispute on at least two non-error runs. It varies by model because run errors reduce the number of scoreable runs. Compare value_flip against each model's own value_eligible, not against a fixed 162."
+}

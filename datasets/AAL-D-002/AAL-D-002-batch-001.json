@@ -1,0 +1,774 @@
+[
+  {
+    "case_id": "AAL-D-002-001",
+    "asset_class": "interest_rate_swap",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "easy",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0001",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Alpha",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 2450000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -24500000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 22150000.0,
+        "pricing_source": "Counterparty marks"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Alpha",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 1980000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -23980000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 22150000.0,
+        "pricing_source": "Internal marks (Bloomberg BGN)"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD collateral only, MTA $100k, rounding $10k, T+2 settlement",
+        "portfolio_summary": "5 USD IRS trades, net DV01 $45k, 3-10yr tenor bucket"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-PRICE",
+        "field": "portfolio_mtm",
+        "counterparty_value": -24500000.0,
+        "internal_value": -23980000.0,
+        "difference": 520000.0,
+        "difference_unit": "usd",
+        "disputed_call_amount": 470000.0,
+        "correct_call_amount": 1980000.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Dispute $470k excess. Request counterparty marks for comparison. Pay undisputed $1,980,000 by value date to avoid default.",
+      "escalation_required": true,
+      "escalation_target": "Senior collateral manager, trading desk",
+      "pay_undisputed": true,
+      "undisputed_amount": 1980000.0,
+      "severity": 3,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "category_identification": "exact_match",
+      "field_identification": "exact_match",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "correct_call_amount"
+      },
+      "disputed_amount": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "disputed_call_amount"
+      },
+      "action_recommendation": "semantic_match",
+      "undisputed_payment": "exact_match",
+      "fabrication_check": "binary"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-002",
+    "asset_class": "listed_futures",
+    "margin_type": "variation_margin",
+    "counterparty_type": "exchange_cleared",
+    "difficulty": "easy",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-CME-20260701-0142",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-01",
+        "counterparty": "CME Clearing",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 87500.0,
+        "calculation_date": "2026-06-30",
+        "settlement_price": 4387.5,
+        "prior_settlement_price": 4300.0,
+        "contracts": 20,
+        "multiplier": 50,
+        "position_direction": "long"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-01",
+        "counterparty": "CME Clearing",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 87500.0,
+        "calculation_date": "2026-06-30",
+        "settlement_price": 4387.5,
+        "prior_settlement_price": 4300.0,
+        "contracts": 20,
+        "multiplier": 50,
+        "position_direction": "long"
+      },
+      "context": {
+        "instrument": "E-mini S&P 500 Futures (ES)",
+        "exchange": "CME",
+        "margin_type": "Daily VM settlement"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": false,
+      "primary_dispute": null,
+      "secondary_dispute": null,
+      "recommended_action": "Call is correct. Pay $87,500 VM by end of day.",
+      "escalation_required": false,
+      "escalation_target": null,
+      "pay_undisputed": true,
+      "undisputed_amount": 87500.0,
+      "severity": 1,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "fabrication_check": "binary",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 100.0,
+        "field": "undisputed_amount"
+      }
+    }
+  },
+  {
+    "case_id": "AAL-D-002-003",
+    "asset_class": "credit_default_swap",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "moderate",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0078",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Beta",
+        "call_direction": "receive",
+        "call_currency": "USD",
+        "call_amount": 340000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": 3400000.0,
+        "threshold": 0,
+        "mta": 50000,
+        "rounding": 10000,
+        "collateral_on_hand": 3140000.0,
+        "pricing_source": "Markit end-of-day"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Beta",
+        "call_direction": "receive",
+        "call_currency": "USD",
+        "calculated_amount": 340000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": 3400000.0,
+        "threshold": 0,
+        "mta": 50000,
+        "rounding": 10000,
+        "collateral_on_hand": 3140000.0,
+        "pricing_source": "Markit end-of-day"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD cash collateral, MTA $50k, rounding $10k",
+        "portfolio_summary": "3 CDS single-name protection bought, IG names, 5yr tenor"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": false,
+      "primary_dispute": null,
+      "secondary_dispute": null,
+      "recommended_action": "Call is correct. Expect receipt of $340,000 by value date.",
+      "escalation_required": false,
+      "escalation_target": null,
+      "pay_undisputed": true,
+      "undisputed_amount": 340000.0,
+      "severity": 1,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "fabrication_check": "binary",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "undisputed_amount"
+      }
+    }
+  },
+  {
+    "case_id": "AAL-D-002-004",
+    "asset_class": "fx_forward",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "moderate",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0201",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Prime Broker Gamma",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 180000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -1800000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 1650000.0,
+        "fx_rate_used": 1.0842,
+        "base_currency": "EUR",
+        "pricing_source": "WM/Reuters 4pm fix"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Prime Broker Gamma",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 166000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -1660000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 1650000.0,
+        "fx_rate_used": 1.0824,
+        "base_currency": "EUR",
+        "pricing_source": "Bloomberg BGN 4pm"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD collateral, MTA $100k, rounding $10k. FX conversion at WM/Reuters 4pm fix per CSA Paragraph 11(f)",
+        "portfolio_summary": "4 EUR/USD FX forward trades, notional EUR 15M aggregate"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-FX",
+        "field": "fx_rate_used",
+        "counterparty_value": 1.0842,
+        "internal_value": 1.0824,
+        "difference": 0.0018,
+        "difference_unit": "fx_rate",
+        "disputed_call_amount": 14000.0,
+        "correct_call_amount": 166000.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Dispute FX conversion rate. CSA specifies WM/Reuters 4pm fix \u2014 confirm correct fix rate with both parties. Pay undisputed $166,000 pending resolution.",
+      "escalation_required": true,
+      "escalation_target": "Collateral manager, FX desk",
+      "pay_undisputed": true,
+      "undisputed_amount": 166000.0,
+      "severity": 2,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "category_identification": "exact_match",
+      "field_identification": "exact_match",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "correct_call_amount"
+      },
+      "disputed_amount": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "disputed_call_amount"
+      },
+      "action_recommendation": "semantic_match",
+      "undisputed_payment": "exact_match",
+      "fabrication_check": "binary"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-005",
+    "asset_class": "interest_rate_swap",
+    "margin_type": "initial_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "complex",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0055",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Delta",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 4820000.0,
+        "calculation_date": "2026-06-30",
+        "im_methodology": "ISDA SIMM v2.6",
+        "simm_amount": 4820000.0,
+        "collateral_on_hand": 0.0,
+        "threshold": 0,
+        "mta": 500000
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Delta",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 3150000.0,
+        "calculation_date": "2026-06-30",
+        "im_methodology": "Schedule approach (4% of notional)",
+        "schedule_amount": 3150000.0,
+        "collateral_on_hand": 0.0,
+        "threshold": 0,
+        "mta": 500000
+      },
+      "context": {
+        "csa_terms": "Phase 5 UMR. ISDA 2018 Credit Support Annex for Initial Margin. IM methodology: as agreed per ISDA SIMM governance. No schedule fallback specified.",
+        "portfolio_summary": "New IRS portfolio, 8 trades, notional $78.75M aggregate, mixed tenors 2-30yr",
+        "umr_status": "Both parties Phase 5, AANA above threshold"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-SIMM",
+        "field": "im_methodology",
+        "counterparty_value": "ISDA SIMM v2.6",
+        "internal_value": "Schedule approach (4% of notional)",
+        "difference": 1670000.0,
+        "difference_unit": "usd",
+        "disputed_call_amount": 1670000.0,
+        "correct_call_amount": 4820000.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Methodology dispute. CSA mandates SIMM \u2014 internal calculation used schedule approach in error. Recalculate using ISDA SIMM v2.6 and pay $4,820,000. Escalate to operations and legal to prevent recurrence.",
+      "escalation_required": true,
+      "escalation_target": "Operations management, legal, UMR compliance",
+      "pay_undisputed": true,
+      "undisputed_amount": 4820000.0,
+      "severity": 5,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "category_identification": "exact_match",
+      "field_identification": "exact_match",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 5000.0,
+        "field": "correct_call_amount"
+      },
+      "disputed_amount": {
+        "method": "numeric_match",
+        "tolerance": 5000.0,
+        "field": "disputed_call_amount"
+      },
+      "action_recommendation": "semantic_match",
+      "undisputed_payment": "exact_match",
+      "fabrication_check": "binary"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-006",
+    "asset_class": "equity_total_return_swap",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "moderate",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0319",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Prime Broker Alpha",
+        "call_direction": "receive",
+        "call_currency": "USD",
+        "call_amount": 620000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": 6200000.0,
+        "threshold": 0,
+        "mta": 250000,
+        "rounding": 10000,
+        "collateral_on_hand": 5640000.0,
+        "pricing_source": "Exchange close"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Prime Broker Alpha",
+        "call_direction": "receive",
+        "call_currency": "USD",
+        "calculated_amount": 370000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": 6200000.0,
+        "threshold": 0,
+        "mta": 250000,
+        "rounding": 10000,
+        "collateral_on_hand": 5830000.0,
+        "pricing_source": "Exchange close"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD cash collateral, MTA $250k, rounding $10k",
+        "portfolio_summary": "Long equity TRS on S&P 500 basket, notional $50M",
+        "collateral_note": "Counterparty records $5,640,000 collateral on hand; internal records $5,830,000. $190,000 cash transfer on 2026-06-28 pending counterparty acknowledgment."
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-SETTLED",
+        "field": "collateral_on_hand",
+        "counterparty_value": 5640000.0,
+        "internal_value": 5830000.0,
+        "difference": 190000.0,
+        "difference_unit": "usd",
+        "disputed_call_amount": 250000.0,
+        "correct_call_amount": 370000.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Collateral balance dispute. $190k transfer from 2026-06-28 not reflected in counterparty records. Provide transfer confirmation. Pay undisputed $370,000 pending resolution of collateral balance.",
+      "escalation_required": true,
+      "escalation_target": "Collateral operations, settlement team",
+      "pay_undisputed": true,
+      "undisputed_amount": 370000.0,
+      "severity": 3,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "category_identification": "exact_match",
+      "field_identification": "exact_match",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "correct_call_amount"
+      },
+      "disputed_amount": {
+        "method": "numeric_match",
+        "tolerance": 1000.0,
+        "field": "disputed_call_amount"
+      },
+      "action_recommendation": "semantic_match",
+      "undisputed_payment": "exact_match",
+      "fabrication_check": "binary"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-007",
+    "asset_class": "interest_rate_swap",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "easy",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0088",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Epsilon",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 50000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -12350000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 12300000.0,
+        "pricing_source": "Counterparty marks"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Epsilon",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 50000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -12350000.0,
+        "threshold": 0,
+        "mta": 100000,
+        "rounding": 10000,
+        "collateral_on_hand": 12300000.0,
+        "pricing_source": "Bloomberg BGN"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD collateral, MTA $100k, rounding $10k",
+        "portfolio_summary": "2 IRS trades, net DV01 $12k",
+        "mta_note": "Calculated call amount is $50,000 which is below the $100,000 MTA threshold."
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-THRESH",
+        "field": "call_amount",
+        "counterparty_value": 50000.0,
+        "internal_value": 0.0,
+        "difference": 50000.0,
+        "difference_unit": "usd",
+        "disputed_call_amount": 50000.0,
+        "correct_call_amount": 0.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Call is below the $100,000 MTA threshold and should not have been made. Notify counterparty and do not pay.",
+      "escalation_required": false,
+      "escalation_target": null,
+      "pay_undisputed": false,
+      "undisputed_amount": 0.0,
+      "severity": 2,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "fabrication_check": "binary",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 100.0,
+        "field": "undisputed_amount"
+      },
+      "category_identification": "exact_match"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-008",
+    "asset_class": "listed_futures",
+    "margin_type": "initial_margin",
+    "counterparty_type": "exchange_cleared",
+    "difficulty": "moderate",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-CME-20260701-0891",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-01",
+        "counterparty": "CME Clearing",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 275000.0,
+        "calculation_date": "2026-07-01",
+        "im_methodology": "SPAN",
+        "contracts": 50,
+        "instrument": "10-Year Treasury Note Futures (ZN)",
+        "span_scan_risk": 225000.0,
+        "span_intracommodity_spread": 12500.0,
+        "span_delivery_charge": 0.0,
+        "span_short_option_minimum": 37500.0,
+        "collateral_on_hand": 0.0
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-01",
+        "counterparty": "CME Clearing",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 275000.0,
+        "calculation_date": "2026-07-01",
+        "im_methodology": "SPAN",
+        "contracts": 50,
+        "instrument": "10-Year Treasury Note Futures (ZN)",
+        "span_scan_risk": 225000.0,
+        "span_intracommodity_spread": 12500.0,
+        "span_delivery_charge": 0.0,
+        "span_short_option_minimum": 37500.0,
+        "collateral_on_hand": 0.0
+      },
+      "context": {
+        "instrument": "CME 10-Year Treasury Note Futures",
+        "margin_type": "Initial margin \u2014 new position",
+        "span_parameters": "CME SPAN parameters as of 2026-07-01"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": false,
+      "primary_dispute": null,
+      "secondary_dispute": null,
+      "recommended_action": "IM call is correct per SPAN calculation. Post $275,000 initial margin by end of day.",
+      "escalation_required": false,
+      "escalation_target": null,
+      "pay_undisputed": true,
+      "undisputed_amount": 275000.0,
+      "severity": 1,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "fabrication_check": "binary",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 100.0,
+        "field": "undisputed_amount"
+      }
+    }
+  },
+  {
+    "case_id": "AAL-D-002-009",
+    "asset_class": "cross_currency_swap",
+    "margin_type": "variation_margin",
+    "counterparty_type": "bilateral_otc",
+    "difficulty": "complex",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-20260701-0447",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Zeta",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 1830000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -18300000.0,
+        "threshold": 0,
+        "mta": 200000,
+        "rounding": 10000,
+        "collateral_on_hand": 16520000.0,
+        "pricing_source": "Counterparty marks",
+        "netting_set": "SET-A"
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-03",
+        "counterparty": "Dealer Bank Zeta",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 1830000.0,
+        "calculation_date": "2026-06-30",
+        "portfolio_mtm": -18300000.0,
+        "threshold": 0,
+        "mta": 200000,
+        "rounding": 10000,
+        "collateral_on_hand": 16520000.0,
+        "pricing_source": "Bloomberg BGN",
+        "netting_set": "SET-A and SET-B combined"
+      },
+      "context": {
+        "csa_terms": "Two-way CSA, USD collateral, MTA $200k, rounding $10k. Single netting set per CSA.",
+        "portfolio_summary": "SET-A: 3 XCS trades MTM -$18.3M. SET-B: 2 IRS trades MTM +$4.1M. Internal combined both sets; counterparty used SET-A only.",
+        "netting_note": "CSA defines a single netting set covering all transactions. Internal calculation correctly nets SET-A and SET-B. Counterparty calculation only included SET-A."
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": true,
+      "primary_dispute": {
+        "category": "DIS-NETTING",
+        "field": "netting_set",
+        "counterparty_value": "SET-A only",
+        "internal_value": "SET-A and SET-B combined",
+        "difference": 4100000.0,
+        "difference_unit": "usd",
+        "disputed_call_amount": 1420000.0,
+        "correct_call_amount": 410000.0
+      },
+      "secondary_dispute": null,
+      "recommended_action": "Netting set error by counterparty. CSA defines single netting set. Combined MTM is -$14.2M; correct call is $410,000 not $1,830,000. Dispute excess $1,420,000 and provide CSA netting set definition. Pay undisputed $410,000 by value date.",
+      "escalation_required": true,
+      "escalation_target": "Senior collateral manager, legal",
+      "pay_undisputed": true,
+      "undisputed_amount": 410000.0,
+      "severity": 4,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "category_identification": "exact_match",
+      "field_identification": "exact_match",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 5000.0,
+        "field": "correct_call_amount"
+      },
+      "disputed_amount": {
+        "method": "numeric_match",
+        "tolerance": 5000.0,
+        "field": "disputed_call_amount"
+      },
+      "action_recommendation": "semantic_match",
+      "undisputed_payment": "exact_match",
+      "fabrication_check": "binary"
+    }
+  },
+  {
+    "case_id": "AAL-D-002-010",
+    "asset_class": "securities_lending",
+    "margin_type": "mark_to_market_margin",
+    "counterparty_type": "securities_lending",
+    "difficulty": "easy",
+    "input": {
+      "margin_call_notice": {
+        "call_id": "MC-SL-20260701-0023",
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-02",
+        "counterparty": "Custodian Bank Alpha",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "call_amount": 95000.0,
+        "calculation_date": "2026-06-30",
+        "securities_on_loan": [
+          {
+            "cusip": "037833100",
+            "description": "Apple Inc",
+            "quantity": 10000,
+            "market_value": 2150000.0
+          },
+          {
+            "cusip": "594918104",
+            "description": "Microsoft Corp",
+            "quantity": 5000,
+            "market_value": 1900000.0
+          }
+        ],
+        "total_loan_value": 4050000.0,
+        "margin_ratio": 1.02,
+        "required_collateral": 4131000.0,
+        "collateral_on_hand": 4036000.0
+      },
+      "internal_calculation": {
+        "call_date": "2026-07-01",
+        "value_date": "2026-07-02",
+        "counterparty": "Custodian Bank Alpha",
+        "call_direction": "pay",
+        "call_currency": "USD",
+        "calculated_amount": 95000.0,
+        "calculation_date": "2026-06-30",
+        "total_loan_value": 4050000.0,
+        "margin_ratio": 1.02,
+        "required_collateral": 4131000.0,
+        "collateral_on_hand": 4036000.0
+      },
+      "context": {
+        "agreement": "GMSLA, 102% margin ratio, T+1 settlement",
+        "portfolio_summary": "2 equity securities on loan, USD cash collateral"
+      }
+    },
+    "ground_truth": {
+      "dispute_exists": false,
+      "primary_dispute": null,
+      "secondary_dispute": null,
+      "recommended_action": "Margin call is correct. Post $95,000 additional cash collateral by T+1.",
+      "escalation_required": false,
+      "escalation_target": null,
+      "pay_undisputed": true,
+      "undisputed_amount": 95000.0,
+      "severity": 1,
+      "confidence": "definitive"
+    },
+    "scoring_criteria": {
+      "dispute_detection": "exact_match",
+      "fabrication_check": "binary",
+      "amount_calculation": {
+        "method": "numeric_match",
+        "tolerance": 100.0,
+        "field": "undisputed_amount"
+      }
+    }
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "scorer_version": "d006-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_break_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "attribution_category_accuracy": {
+    "pooled": {
+      "accuracy": 0.9012,
+      "n": 486,
+      "hits": 438,
+      "wilson_95": [
+        0.8715,
+        0.9247
+      ]
+    }
+  },
+  "field_accuracy": {
+    "pooled": {
+      "accuracy": 0.9012,
+      "n": 486,
+      "hits": 438,
+      "wilson_95": [
+        0.8715,
+        0.9247
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.3107,
+      "n": 486,
+      "hits": 151,
+      "wilson_95": [
+        0.2712,
+        0.3532
+      ]
+    }
+  },
+  "substitution_validity": {
+    "pooled": {
+      "accuracy": 0.9259,
+      "n": 486,
+      "hits": 450,
+      "wilson_95": [
+        0.8992,
+        0.946
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.8354,
+      "n": 486,
+      "hits": 406,
+      "wilson_95": [
+        0.7998,
+        0.8657
+      ]
+    }
+  },
+  "model": "meta/muse-spark-1.2",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-006-v1.0.json",
+  "prompt_version": "d006-prompt-v1.0",
+  "sampling": "temperature=0.7, top_p=0.9"
+}

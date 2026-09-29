@@ -1,0 +1,79 @@
+{
+  "benchmark": "AAL-D-004",
+  "version": "1.0.1",
+  "generator_version": "d004-v1.0.1",
+  "realized": {
+    "n_cases": 250,
+    "categories": {
+      "FAIL-SSI": 22,
+      "FAIL-UNMATCHED": 18,
+      "FAIL-AMT": 15,
+      "FAIL-CASHSHORT": 16,
+      "FAIL-CUTOFF": 16,
+      "FAIL-AGENT": 7,
+      "FAIL-DUP": 2,
+      "FAIL-SECSHORT": 12,
+      "FAIL-CCY": 10,
+      "FAIL-ACCT": 10,
+      "FAIL-CORPACT": 5,
+      "FAIL-NET": 14,
+      "FAIL-FX": 8,
+      "FAIL-COMPLIANCE": 4,
+      "FAIL-NOVATION": 3
+    },
+    "difficulty_x_clean": {
+      "easy|fail": 75,
+      "moderate|fail": 41,
+      "easy|clean": 40,
+      "complex|fail": 46,
+      "moderate|clean": 30,
+      "complex|clean": 18
+    },
+    "severity": {
+      "2": 50,
+      "3": 62,
+      "4": 35,
+      "1": 88,
+      "5": 15
+    },
+    "traps": {
+      "straightforward": 40,
+      "netting_makes_it_correct": 12,
+      "late_but_settled": 12,
+      "permitted_partial": 10,
+      "ssi_superseded_but_correct_active": 8,
+      "fx_one_leg_pending_within_cutoff": 6
+    },
+    "venues": {
+      "prime_brokered": 40,
+      "cls_settled": 35,
+      "bilateral_otc": 150,
+      "cleared_ccp": 25
+    },
+    "asset_classes": {
+      "interest_rate_swap": 52,
+      "credit_default_swap": 57,
+      "fx_forward": 35,
+      "equity_swap": 28,
+      "fx_option": 33,
+      "commodity_swap": 26,
+      "cross_currency_swap": 19
+    },
+    "fail_directions": {
+      "inbound": 118,
+      "outbound": 118,
+      "bilateral": 14
+    },
+    "settlement_types": {
+      "coupon_reset": 71,
+      "cds_premium": 36,
+      "variation_margin": 26,
+      "upfront_fee": 21,
+      "termination_payment": 16,
+      "fx_principal": 53,
+      "initial_margin": 21,
+      "physical_delivery": 6
+    },
+    "secondary_fails": 6
+  }
+}

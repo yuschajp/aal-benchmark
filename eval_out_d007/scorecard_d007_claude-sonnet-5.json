@@ -1,0 +1,106 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.5103,
+      "n": 486,
+      "hits": 248,
+      "wilson_95": [
+        0.4659,
+        0.5545
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.7716,
+      "n": 486,
+      "hits": 375,
+      "wilson_95": [
+        0.7322,
+        0.8067
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.786,
+      "n": 486,
+      "hits": 382,
+      "wilson_95": [
+        0.7474,
+        0.8202
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 486,
+      "hits": 486,
+      "wilson_95": [
+        0.9922,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "model": "claude-sonnet-5",
+  "provider": "anthropic",
+  "dataset": "datasets/AAL-D-007-v1.1.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "thinking=adaptive, effort=high",
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 8.627,
+      "p95": 38.489,
+      "mean": 13.031,
+      "max": 104.901,
+      "total": 9773.1
+    },
+    "tokens": {
+      "prompt_mean": 2333.8,
+      "completion_mean": 1140.6,
+      "reasoning_mean": null,
+      "prompt_total": 1750320,
+      "completion_total": 855465
+    },
+    "attempts_mean": 1.001
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "benchmark": "AAL-D-005",
+  "version": "1.0",
+  "generator_version": "d005-v1.0",
+  "realized": {
+    "n_cases": 250,
+    "categories": {
+      "BRK-PRICE": 24,
+      "BRK-AMEND": 15,
+      "BRK-SIGN": 14,
+      "BRK-MISSINGTRADE": 20,
+      "BRK-NEWTRADE": 16,
+      "BRK-CANCEL": 10,
+      "BRK-DUP": 2,
+      "BRK-FEE": 11,
+      "BRK-CORPACT": 8,
+      "BRK-DAYCOUNT": 8,
+      "BRK-RESET": 2,
+      "BRK-FX": 12,
+      "BRK-SENSITIVITY": 8,
+      "BRK-POSITION": 7,
+      "BRK-CCY": 5
+    },
+    "difficulty_x_clean": {
+      "easy|break": 75,
+      "moderate|break": 41,
+      "complex|break": 46,
+      "easy|clean": 40,
+      "moderate|clean": 30,
+      "complex|clean": 18
+    },
+    "severity": {
+      "2": 48,
+      "3": 64,
+      "4": 35,
+      "5": 15,
+      "1": 88
+    },
+    "traps": {
+      "de_minimis_below_threshold": 40,
+      "new_trade_explains_move": 12,
+      "explain_fully_accounts": 12,
+      "corp_action_already_applied": 10,
+      "stale_mark_but_immaterial": 8,
+      "t1_adjustment_pending_correct": 6
+    },
+    "product_types": {
+      "fx_forward": 38,
+      "commodity_swap": 30,
+      "interest_rate_swap": 24,
+      "cross_currency_swap": 24,
+      "credit_default_swap": 21,
+      "equity_swap": 24,
+      "bond": 25,
+      "equity_cash": 36,
+      "fx_option": 28
+    },
+    "break_sources": {
+      "market_data": 102,
+      "trade_lifecycle": 98,
+      "static_reference": 30,
+      "risk_model": 20
+    },
+    "pnl_directions": {
+      "loss_overstated": 82,
+      "gain_overstated": 41,
+      "gain_understated": 83,
+      "loss_understated": 44
+    },
+    "explain_null": 18,
+    "secondary_breaks": 6
+  }
+}

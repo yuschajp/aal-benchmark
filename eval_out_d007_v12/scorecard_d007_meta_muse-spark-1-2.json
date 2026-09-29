@@ -1,0 +1,108 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 243,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 507,
+      "hits": 507,
+      "wilson_95": [
+        0.9925,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 195,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0193
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.6154,
+      "n": 312,
+      "hits": 192,
+      "wilson_95": [
+        0.5603,
+        0.6677
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.7019,
+      "n": 312,
+      "hits": 219,
+      "wilson_95": [
+        0.649,
+        0.75
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.8077,
+      "n": 312,
+      "hits": 252,
+      "wilson_95": [
+        0.7603,
+        0.8476
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 312,
+      "hits": 312,
+      "wilson_95": [
+        0.9878,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 507,
+      "hits": 507,
+      "wilson_95": [
+        0.9925,
+        1.0
+      ]
+    }
+  },
+  "model": "meta/muse-spark-1.2",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-007-v1.2.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=0.7, top_p=0.9",
+  "sampling_requested": "temperature=0.7, top_p=0.9",
+  "params_rejected_by_endpoint": [],
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 14.145,
+      "p95": 48.802,
+      "mean": 18.836,
+      "max": 675.09,
+      "total": 14127.1
+    },
+    "tokens": {
+      "prompt_mean": 1559.2,
+      "completion_mean": 3218.8,
+      "reasoning_mean": 3030.7,
+      "prompt_total": 790512,
+      "completion_total": 1631946
+    },
+    "attempts_mean": 3.292
+  }
+}

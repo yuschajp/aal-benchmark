@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AAL-D-001 Expected Model Output",
+  "description": "Standardized output schema all models must produce. Enables objective cross-model comparison.",
+  "type": "object",
+  "required": [
+    "result",
+    "exceptions",
+    "fields_compared",
+    "recommended_action",
+    "escalation_required",
+    "severity",
+    "human_review_required",
+    "confidence"
+  ],
+  "properties": {
+    "result": {
+      "type": "string",
+      "enum": ["EXCEPTION_IDENTIFIED", "NO_EXCEPTION", "MULTIPLE_EXCEPTIONS"]
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "field", "counterparty_value", "internal_value", "difference"],
+        "properties": {
+          "category": {"type": "string"},
+          "field": {"type": "string"},
+          "counterparty_value": {"type": ["string", "number", "null"]},
+          "internal_value": {"type": ["string", "number", "null"]},
+          "difference": {"type": "string"},
+          "total_exposure": {"type": "string"}
+        }
+      }
+    },
+    "fields_compared": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["MATCH", "MISMATCH", "NOT_PRESENT", "NOT_APPLICABLE"]
+      }
+    },
+    "recommended_action": {"type": "string"},
+    "escalation_required": {"type": "boolean"},
+    "severity": {"type": "integer", "minimum": 1, "maximum": 5},
+    "human_review_required": {"type": "boolean"},
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "moderate", "low"]
+    }
+  }
+}

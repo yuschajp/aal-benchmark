@@ -1,0 +1,88 @@
+{
+  "scorer_version": "d006-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_break_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "attribution_category_accuracy": {
+    "pooled": {
+      "accuracy": 0.9877,
+      "n": 486,
+      "hits": 480,
+      "wilson_95": [
+        0.9733,
+        0.9943
+      ]
+    }
+  },
+  "field_accuracy": {
+    "pooled": {
+      "accuracy": 0.9877,
+      "n": 486,
+      "hits": 480,
+      "wilson_95": [
+        0.9733,
+        0.9943
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.1543,
+      "n": 486,
+      "hits": 75,
+      "wilson_95": [
+        0.1249,
+        0.1891
+      ]
+    }
+  },
+  "substitution_validity": {
+    "pooled": {
+      "accuracy": 0.9815,
+      "n": 486,
+      "hits": 477,
+      "wilson_95": [
+        0.9652,
+        0.9902
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.5412,
+      "n": 486,
+      "hits": 263,
+      "wilson_95": [
+        0.4967,
+        0.585
+      ]
+    }
+  },
+  "model": "x-ai/grok-4.5",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-006-v1.0.json",
+  "prompt_version": "d006-prompt-v1.0",
+  "sampling": "temperature=0.0"
+}

@@ -1,0 +1,115 @@
+{
+  "dataset": "datasets/AAL-D-008-v0.1.json",
+  "n_cases": 250,
+  "n_runs": 3,
+  "n_observations": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "accuracy": 1.0,
+    "n": 750,
+    "wilson_95": [
+      0.9949039692158141,
+      1.0
+    ]
+  },
+  "attribution_accuracy": {
+    "accuracy": 1.0,
+    "n": 750,
+    "wilson_95": [
+      0.9949039692158141,
+      1.0
+    ]
+  },
+  "value_accuracy": {
+    "accuracy": 0.981574539363484,
+    "n": 597,
+    "wilson_95": [
+      0.9673099395261707,
+      0.9896810544396265
+    ]
+  },
+  "false_positive_rate": {
+    "rate": 0.0,
+    "n_trap_observations": 69,
+    "wilson_95": [
+      0.0,
+      0.05273909414400562
+    ]
+  },
+  "attribution_flip_rate": {
+    "rate": 0.0,
+    "flipped": 0,
+    "eligible_cases": 250
+  },
+  "brier_score": 0.005861466666666667,
+  "per_category_attribution": {
+    "RL-DIS-ACCRUAL": {
+      "accuracy": 1.0,
+      "n": 60
+    },
+    "RL-DIS-BENCHRATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-DIS-CORPACTION": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-DAYCOUNT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-FEESPLIT": {
+      "accuracy": 1.0,
+      "n": 48
+    },
+    "RL-DIS-HAIRCUT": {
+      "accuracy": 1.0,
+      "n": 69
+    },
+    "RL-DIS-INSUFFICIENT-DATA": {
+      "accuracy": 1.0,
+      "n": 84
+    },
+    "RL-DIS-NOTIONAL": {
+      "accuracy": 1.0,
+      "n": 72
+    },
+    "RL-DIS-RECALL": {
+      "accuracy": 1.0,
+      "n": 96
+    },
+    "RL-DIS-SETTLEDATE": {
+      "accuracy": 1.0,
+      "n": 57
+    },
+    "RL-NO-DISPUTE": {
+      "accuracy": 1.0,
+      "n": 69
+    }
+  },
+  "model": "x-ai/grok-4.7",
+  "provider": "openrouter",
+  "prompt_version": "d008-prompt-v0.1",
+  "sampling": "temperature=1.0",
+  "sampling_requested": "temperature=1.0",
+  "params_rejected_by_endpoint": [],
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 13.289,
+      "p95": 93.867,
+      "mean": 24.902,
+      "max": 497.767,
+      "total": 18676.2
+    },
+    "tokens": {
+      "prompt_mean": 2458.3,
+      "completion_mean": 1891.5,
+      "reasoning_mean": 1752.2,
+      "prompt_total": 1843701,
+      "completion_total": 1418643
+    },
+    "attempts_mean": 1.011
+  }
+}

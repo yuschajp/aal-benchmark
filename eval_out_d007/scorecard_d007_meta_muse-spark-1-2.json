@@ -1,0 +1,106 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 0,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 264,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.0143
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.5309,
+      "n": 486,
+      "hits": 258,
+      "wilson_95": [
+        0.4864,
+        0.5748
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.677,
+      "n": 486,
+      "hits": 329,
+      "wilson_95": [
+        0.6341,
+        0.717
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.8169,
+      "n": 486,
+      "hits": 397,
+      "wilson_95": [
+        0.78,
+        0.8487
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 486,
+      "hits": 486,
+      "wilson_95": [
+        0.9922,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 750,
+      "hits": 750,
+      "wilson_95": [
+        0.9949,
+        1.0
+      ]
+    }
+  },
+  "model": "meta/muse-spark-1.2",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-007-v1.1.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=0.7, top_p=0.9",
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 26.421,
+      "p95": 107.893,
+      "mean": 36.34,
+      "max": 212.512,
+      "total": 27254.9
+    },
+    "tokens": {
+      "prompt_mean": 1532.0,
+      "completion_mean": 3525.3,
+      "reasoning_mean": 3323.8,
+      "prompt_total": 1148970,
+      "completion_total": 2643989
+    },
+    "attempts_mean": 1.013
+  }
+}

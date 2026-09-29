@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AAL-D-001 Benchmark Case",
+  "description": "Schema for AI Alpha Labs Trade Confirmation Exception Identification Benchmark cases",
+  "type": "object",
+  "required": [
+    "case_id",
+    "benchmark_version",
+    "workflow",
+    "asset_class",
+    "difficulty",
+    "risk_level",
+    "scenario_description",
+    "business_context",
+    "input",
+    "ground_truth",
+    "scoring_criteria",
+    "failure_modes",
+    "version_history"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^AAL-D-001-\\d{3}$"
+    },
+    "benchmark_version": {
+      "type": "string"
+    },
+    "workflow": {
+      "type": "string",
+      "enum": ["trade_confirmation_exception"]
+    },
+    "asset_class": {
+      "type": "string",
+      "enum": ["equities", "fixed_income", "listed_futures", "options", "interest_rate_swap", "fx_forward", "credit"]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "moderate", "complex"]
+    },
+    "risk_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "scenario_description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "business_context": {
+      "type": "string",
+      "minLength": 20
+    },
+    "input": {
+      "type": "object",
+      "required": ["counterparty_confirmation", "internal_record"],
+      "properties": {
+        "counterparty_confirmation": {"type": "object"},
+        "internal_record": {"type": "object"}
+      }
+    },
+    "ground_truth": {
+      "type": "object",
+      "required": [
+        "exception_exists",
+        "primary_exception",
+        "recommended_action",
+        "escalation_required",
+        "human_review_required",
+        "severity",
+        "confidence"
+      ]
+    },
+    "scoring_criteria": {
+      "type": "object"
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^FM-\\d{2}$"},
+      "minItems": 1
+    },
+    "reviewer_notes": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "version_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "change"]
+      },
+      "minItems": 1
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "scorer_version": "d007-score-v1.0.0",
+  "n_cases": 250,
+  "n_runs_total": 750,
+  "n_errors": 194,
+  "detection_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 556,
+      "hits": 556,
+      "wilson_95": [
+        0.9931,
+        1.0
+      ]
+    }
+  },
+  "false_flag_rate": {
+    "pooled": {
+      "accuracy": 0.0,
+      "n": 198,
+      "hits": 0,
+      "wilson_95": [
+        0.0,
+        0.019
+      ]
+    }
+  },
+  "category_accuracy": {
+    "pooled": {
+      "accuracy": 0.4721,
+      "n": 358,
+      "hits": 169,
+      "wilson_95": [
+        0.4209,
+        0.5238
+      ]
+    }
+  },
+  "component_accuracy": {
+    "pooled": {
+      "accuracy": 0.6564,
+      "n": 358,
+      "hits": 235,
+      "wilson_95": [
+        0.6058,
+        0.7037
+      ]
+    }
+  },
+  "value_accuracy": {
+    "pooled": {
+      "accuracy": 0.6648,
+      "n": 358,
+      "hits": 238,
+      "wilson_95": [
+        0.6144,
+        0.7117
+      ]
+    }
+  },
+  "difference_accuracy": {
+    "pooled": {
+      "accuracy": 1.0,
+      "n": 358,
+      "hits": 358,
+      "wilson_95": [
+        0.9894,
+        1.0
+      ]
+    }
+  },
+  "escalation_accuracy": {
+    "pooled": {
+      "accuracy": 0.9964,
+      "n": 556,
+      "hits": 554,
+      "wilson_95": [
+        0.987,
+        0.999
+      ]
+    }
+  },
+  "model": "deepseek/deepseek-v4-pro",
+  "provider": "openrouter",
+  "dataset": "datasets/AAL-D-007-v1.2.json",
+  "prompt_version": "d007-prompt-v1.1",
+  "sampling": "temperature=0.0",
+  "sampling_requested": "temperature=0.0",
+  "params_rejected_by_endpoint": [],
+  "performance": {
+    "n_timed": 750,
+    "latency_s": {
+      "p50": 12.963,
+      "p95": 163.236,
+      "mean": 35.73,
+      "max": 1018.287,
+      "total": 26797.3
+    },
+    "tokens": {
+      "prompt_mean": 1605.9,
+      "completion_mean": 2695.8,
+      "reasoning_mean": 2608.1,
+      "prompt_total": 892858,
+      "completion_total": 1498859
+    },
+    "attempts_mean": 2.835
+  }
+}

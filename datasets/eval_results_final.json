@@ -1,0 +1,413 @@
+{
+  "evaluation_id": "AAL-EVAL-2026-002",
+  "model": "claude-3-5-sonnet-20241022 (simulated deterministic)",
+  "dataset": "AAL-D-001 v1.0 (corrected)",
+  "cases": 50,
+  "accuracy": 100.0,
+  "precision": 100.0,
+  "recall": 100.0,
+  "f1": 100.0,
+  "fabrication_rate": 0.0,
+  "per_case": [
+    {
+      "case_id": "AAL-D-001-001",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-002",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-003",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-004",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "listed_futures",
+      "gt_category": "EXC-SDATE"
+    },
+    {
+      "case_id": "AAL-D-001-005",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "options",
+      "gt_category": "EXC-COMM"
+    },
+    {
+      "case_id": "AAL-D-001-006",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "interest_rate_swap",
+      "gt_category": "EXC-CPTY"
+    },
+    {
+      "case_id": "AAL-D-001-007",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "fx_forward",
+      "gt_category": "EXC-SSI"
+    },
+    {
+      "case_id": "AAL-D-001-008",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "credit",
+      "gt_category": "EXC-BOOK"
+    },
+    {
+      "case_id": "AAL-D-001-009",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-ALLOC"
+    },
+    {
+      "case_id": "AAL-D-001-010",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-DUP"
+    },
+    {
+      "case_id": "AAL-D-001-011",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-012",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-013",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-014",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-015",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-016",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fixed_income",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-017",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fixed_income",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-018",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "listed_futures",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-019",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-020",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-021",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-022",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-023",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-024",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-025",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-PRICE"
+    },
+    {
+      "case_id": "AAL-D-001-026",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-027",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-028",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-029",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-SDATE"
+    },
+    {
+      "case_id": "AAL-D-001-030",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "fixed_income",
+      "gt_category": "EXC-SDATE"
+    },
+    {
+      "case_id": "AAL-D-001-031",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "equities",
+      "gt_category": "EXC-SDATE"
+    },
+    {
+      "case_id": "AAL-D-001-032",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-CPTY"
+    },
+    {
+      "case_id": "AAL-D-001-033",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "equities",
+      "gt_category": "EXC-CPTY"
+    },
+    {
+      "case_id": "AAL-D-001-034",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-COMM"
+    },
+    {
+      "case_id": "AAL-D-001-035",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-COMM"
+    },
+    {
+      "case_id": "AAL-D-001-036",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-COMM"
+    },
+    {
+      "case_id": "AAL-D-001-037",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-SSI"
+    },
+    {
+      "case_id": "AAL-D-001-038",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-SSI"
+    },
+    {
+      "case_id": "AAL-D-001-039",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-TDATE"
+    },
+    {
+      "case_id": "AAL-D-001-040",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "equities",
+      "gt_category": "EXC-TDATE"
+    },
+    {
+      "case_id": "AAL-D-001-041",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-ACCT"
+    },
+    {
+      "case_id": "AAL-D-001-042",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "equities",
+      "gt_category": "EXC-ACCT"
+    },
+    {
+      "case_id": "AAL-D-001-043",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-044",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-045",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "equities",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-046",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "listed_futures",
+      "gt_category": "EXC-QTY"
+    },
+    {
+      "case_id": "AAL-D-001-047",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "options",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-048",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "moderate",
+      "asset_class": "interest_rate_swap",
+      "gt_category": "EXC-PROD"
+    },
+    {
+      "case_id": "AAL-D-001-049",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "easy",
+      "asset_class": "fx_forward",
+      "gt_category": "CLEAN"
+    },
+    {
+      "case_id": "AAL-D-001-050",
+      "result": "PASS",
+      "fail_reason": "",
+      "difficulty": "complex",
+      "asset_class": "credit",
+      "gt_category": "EXC-CCY"
+    }
+  ]
+}
