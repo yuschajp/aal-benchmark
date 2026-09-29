@@ -20,7 +20,7 @@ Set an API key for the provider you want to test, then run the driver for the da
 - Several parameters are assumptions, disclosed on each dataset page.
 - Model results depend on how the model is served. See the AAL-D-008 page on host reasoning defaults.
 - Some early result files carry internal evaluation identifiers (AAL-EVAL-*) from before the current numbering.
-- AAL-D-001 marks 11 of its 250 cases `expert_consensus` and the rest `definitive`. The review process behind that label is not documented in this repository.
+- AAL-D-001's ground truth was constructed by the author with AI assistance, and no independent human reviewers were involved. The label `expert_consensus`, used on 11 of its 250 cases, does not denote a panel of reviewers.
 
 ## Licenses
 
