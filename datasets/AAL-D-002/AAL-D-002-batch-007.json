@@ -3704,8 +3704,8 @@
       },
       "context": {
         "csa_terms": "Two-way CSA, USD collateral, MTA $1M, rounding $500k",
-        "portfolio_summary": "35 USD IRS trades, full curve 2-30yr, net DV01 $385k. Largest portfolio in AAL-D-002 dataset.",
-        "pricing_note": "$4M MTM difference across 35-trade full-curve portfolio. Long-end tenors (20-30yr) most likely source. This is the final case in the AAL-D-002 v1.0 dataset."
+        "portfolio_summary": "35 USD IRS trades, full curve 2-30yr, net DV01 $385k.",
+        "pricing_note": "$4M MTM difference across 35-trade full-curve portfolio. Long-end tenors (20-30yr) most likely source."
       }
     },
     "ground_truth": {
