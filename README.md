@@ -8,7 +8,7 @@ Dataset generators, deterministic scorers, evaluation drivers and results for th
 - Scorers that are deterministic code. No model grades another model.
 - Drivers that run a model against a dataset three times per case and record the serving host, settings and reasoning tokens, for example `run_d008_baseline.py --model gpt-5.6-sol`.
 - Frozen datasets in `datasets/`. Use the latest version of each. Earlier versions are kept so earlier published figures can be reproduced, and some were superseded after defects were found.
-- Results in the `eval_out_*` folders.
+- Results in the `eval_out_*` folders, for AAL-D-006 to AAL-D-008. For AAL-D-001 to AAL-D-005 the datasets and generators are included; their evaluation scripts and raw outputs are not yet published.
 
 ## Reproducing a result
 
