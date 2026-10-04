@@ -20,7 +20,7 @@ Set an API key for the provider you want to test, then run the driver for the da
 - Several parameters are assumptions, disclosed on each dataset page.
 - Model results depend on how the model is served. See the AAL-D-008 page on host reasoning defaults.
 - Some early result files carry internal evaluation identifiers (AAL-EVAL-*) from before the current numbering.
-- The case identifier shown to models in AAL-D-008 prompts includes the benchmark name (for example AAL-D-008-0001). We did not test whether this affects behavior. The AAL-D-006 and AAL-D-007 prompts do not carry one.
+- AAL-D-002 v1.0 case 250 named the dataset in its context. It was corrected in v1.0.1 and the ground truth is unchanged. GPT-4o answered it correctly on all three runs. Excluding it moves GPT-4o's D-002 amount accuracy from 76.08% to 75.88% and no other published metric by more than 0.2 percentage points.
 - The case identifier shown to models in AAL-D-008 prompts includes the benchmark name (for example AAL-D-008-0001). We did not test whether this affects behavior. The AAL-D-006 and AAL-D-007 prompts do not carry one.
 - AAL-D-001's ground truth was constructed by the author with AI assistance, and no independent human reviewers were involved. The label `expert_consensus`, used on 11 of its 250 cases, does not denote a panel of reviewers.
 
