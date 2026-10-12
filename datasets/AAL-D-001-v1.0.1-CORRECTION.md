@@ -3,7 +3,7 @@
 ## What was wrong
 In AAL-D-001 v1.0, 9 of the 12 FX-forward cases with a forward-rate break recorded `total_exposure_usd` as notional × rate difference without converting it to USD. On these USD/xxx pairs the rate difference is in the quote currency (KRW, JPY, BRL, CHF, CAD), so the key held a quote-currency amount labelled as USD. The 3 xxx/USD cases (AUD, EUR) were already correct and are unchanged.
 
-The same unit error was in the evaluation prompt used for the later ("v1.1") runs, which told models to use notional × rate difference and not to invert or divide. Both the answer key and the v1.1 prompt therefore had this error.
+For the later evaluation runs, the prompt in our run scripts contained the same unit error (it told models to use notional × rate difference and not to invert or divide), and these runs' answers are consistent with it.
 
 ## Corrected values
 | Case | Instrument | Old key (USD) | New key (USD, internal-rate conversion) | Also accepted (counterparty-rate conversion) | Accepted range (USD) |
