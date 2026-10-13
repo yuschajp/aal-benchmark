@@ -2,14 +2,14 @@
   "scorer_version": "d007-score-v1.0.0",
   "n_cases": 250,
   "n_runs_total": 750,
-  "n_errors": 243,
+  "n_errors": 0,
   "detection_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 507,
-      "hits": 507,
+      "n": 750,
+      "hits": 750,
       "wilson_95": [
-        0.9925,
+        0.9949,
         1.0
       ]
     }
@@ -17,54 +17,54 @@
   "false_flag_rate": {
     "pooled": {
       "accuracy": 0.0,
-      "n": 195,
+      "n": 264,
       "hits": 0,
       "wilson_95": [
         0.0,
-        0.0193
+        0.0143
       ]
     }
   },
   "category_accuracy": {
     "pooled": {
-      "accuracy": 0.6154,
-      "n": 312,
-      "hits": 192,
+      "accuracy": 0.6461,
+      "n": 486,
+      "hits": 314,
       "wilson_95": [
-        0.5603,
-        0.6677
+        0.6026,
+        0.6873
       ]
     }
   },
   "component_accuracy": {
     "pooled": {
-      "accuracy": 0.7019,
-      "n": 312,
-      "hits": 219,
+      "accuracy": 0.6893,
+      "n": 486,
+      "hits": 335,
       "wilson_95": [
-        0.649,
-        0.75
+        0.6468,
+        0.7288
       ]
     }
   },
   "value_accuracy": {
     "pooled": {
-      "accuracy": 0.8077,
-      "n": 312,
-      "hits": 252,
+      "accuracy": 0.8333,
+      "n": 486,
+      "hits": 405,
       "wilson_95": [
-        0.7603,
-        0.8476
+        0.7976,
+        0.8638
       ]
     }
   },
   "difference_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 312,
-      "hits": 312,
+      "n": 486,
+      "hits": 486,
       "wilson_95": [
-        0.9878,
+        0.9922,
         1.0
       ]
     }
@@ -72,10 +72,10 @@
   "escalation_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 507,
-      "hits": 507,
+      "n": 750,
+      "hits": 750,
       "wilson_95": [
-        0.9925,
+        0.9949,
         1.0
       ]
     }
@@ -87,22 +87,30 @@
   "sampling": "temperature=0.7, top_p=0.9",
   "sampling_requested": "temperature=0.7, top_p=0.9",
   "params_rejected_by_endpoint": [],
+  "openrouter_request_extras": {
+    "reasoning": {
+      "enabled": true
+    },
+    "provider": {
+      "require_parameters": true
+    }
+  },
   "performance": {
     "n_timed": 750,
     "latency_s": {
-      "p50": 14.145,
-      "p95": 48.802,
-      "mean": 18.836,
+      "p50": 23.255,
+      "p95": 54.236,
+      "mean": 27.448,
       "max": 675.09,
-      "total": 14127.1
+      "total": 20586.0
     },
     "tokens": {
-      "prompt_mean": 1559.2,
-      "completion_mean": 3218.8,
-      "reasoning_mean": 3030.7,
-      "prompt_total": 790512,
-      "completion_total": 1631946
+      "prompt_mean": 1563.5,
+      "completion_mean": 3202.1,
+      "reasoning_mean": 3012.7,
+      "prompt_total": 1172619,
+      "completion_total": 2401575
     },
-    "attempts_mean": 3.292
+    "attempts_mean": 1.024
   }
 }

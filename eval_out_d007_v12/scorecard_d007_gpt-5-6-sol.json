@@ -87,6 +87,7 @@
   "sampling": "temperature=provider_default",
   "sampling_requested": "provider_default",
   "params_rejected_by_endpoint": [],
+  "openrouter_request_extras": null,
   "performance": {
     "n_timed": 750,
     "latency_s": {
