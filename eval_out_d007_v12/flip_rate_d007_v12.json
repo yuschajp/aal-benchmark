@@ -1,0 +1,93 @@
+{
+  "scorer_version": "d007-flip-v1.1.0",
+  "dataset": "AAL-D-007-v1.2",
+  "metric": "run-to-run flip rate (self-consistency across a model's own 3 runs)",
+  "generated_utc": "2026-10-13T01:11:45+00:00",
+  "n_models": 9,
+  "models": {
+    "claude-opus-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 6,
+      "value_flip_pct": 3.7
+    },
+    "claude-sonnet-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 35,
+      "value_flip_pct": 21.6
+    },
+    "deepseek_deepseek-v4-pro": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 60,
+      "value_flip_pct": 37.0
+    },
+    "gemini-3-1-pro-preview": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 7,
+      "value_flip_pct": 4.3
+    },
+    "gpt-5-6-sol": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 12,
+      "value_flip_pct": 7.4
+    },
+    "gpt-6-astra": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 5,
+      "value_flip_pct": 3.1
+    },
+    "meta_muse-spark-1-2": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 27,
+      "value_flip_pct": 16.7
+    },
+    "moonshotai_kimi-k3": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 15,
+      "value_flip_pct": 9.3
+    },
+    "x-ai_grok-4-5": {
+      "n_cases": 250,
+      "detect_flip": 0,
+      "detect_flip_pct": 0.0,
+      "value_eligible": 162,
+      "value_flip": 26,
+      "value_flip_pct": 16.0
+    }
+  },
+  "summary": {
+    "detection_flip_pct_range": [
+      0.0,
+      0.0
+    ],
+    "value_flip_pct_range": [
+      3.1,
+      37.0
+    ]
+  },
+  "notes": "value_eligible is the per-model denominator: cases where the model caught a real dispute on at least two non-error runs. It varies by model because run errors reduce the number of scoreable runs. Compare value_flip against each model's own value_eligible, not against a fixed 162.",
+  "source_note": "Results files copied from yuschajp/ai-alpha-labs@740da07 (aal-benchmark/eval_out_d007_v12). flip_rate_d007.py run unchanged; it has no run-time dataset-label argument, so the 'dataset' field (hard-coded v1.1) was set to v1.2 after the run. No other field edited."
+}
