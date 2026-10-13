@@ -10756,15 +10756,28 @@
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemNQLC4ctq48mocNPQ9M'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 513685.82,
+          "dispute_difference": 1245.75,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.232,
+          "attempts": 1,
+          "prompt_tokens": 2428,
+          "completion_tokens": 171,
+          "total_tokens": 2599
         }
       }
     ]
@@ -10774,41 +10787,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemNi8ydQ8ZtUt8kxLevc'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 484389.66,
+          "dispute_difference": 14531.69,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.853,
+          "attempts": 1,
+          "prompt_tokens": 2252,
+          "completion_tokens": 181,
+          "total_tokens": 2433
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemP1xycchF8yAV7CDY8k'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 484389.66,
+          "dispute_difference": 14531.69,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.8876,
+          "attempts": 1,
+          "prompt_tokens": 2252,
+          "completion_tokens": 167,
+          "total_tokens": 2419
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemPKmWJaEjPePuXbcwEC'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 498921.35,
+          "dispute_difference": 14531.69,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.056,
+          "attempts": 1,
+          "prompt_tokens": 2252,
+          "completion_tokens": 182,
+          "total_tokens": 2434
         }
       }
     ]
@@ -10818,41 +10870,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemPdax41AdJv7woXFEif'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 256194.25,
+          "dispute_difference": 539.49,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.7525,
+          "attempts": 1,
+          "prompt_tokens": 2307,
+          "completion_tokens": 225,
+          "total_tokens": 2532
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemPwQMaK9RCujv2Wic8H'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 256194.25,
+          "dispute_difference": 539.49,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.9718,
+          "attempts": 1,
+          "prompt_tokens": 2307,
+          "completion_tokens": 168,
+          "total_tokens": 2475
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemQFDjbwYbRFGjLL9ToY'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 256194.25,
+          "dispute_difference": 539.49,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.8041,
+          "attempts": 1,
+          "prompt_tokens": 2307,
+          "completion_tokens": 169,
+          "total_tokens": 2476
         }
       }
     ]
@@ -10862,41 +10953,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemQZ28rDvmm4sez4YHfd'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 361250.46,
+          "dispute_difference": 10837.51,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 4.2284,
+          "attempts": 1,
+          "prompt_tokens": 2337,
+          "completion_tokens": 392,
+          "total_tokens": 2729
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemRMM2gWG2Eby7o7HhG9'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 361250.46,
+          "dispute_difference": 10837.51,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.517,
+          "attempts": 1,
+          "prompt_tokens": 2337,
+          "completion_tokens": 236,
+          "total_tokens": 2573
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemTZE5HotKEW9syzQSbv'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 361250.46,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.345,
+          "attempts": 1,
+          "prompt_tokens": 2337,
+          "completion_tokens": 196,
+          "total_tokens": 2533
         }
       }
     ]
@@ -10906,41 +11036,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemfCd2yyMyyEJWxj22Z3'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "RATES_FX:GBP:RF-003",
+          "correct_im_amount": 315965.13,
+          "dispute_difference": 44290.45,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 24.8587,
+          "attempts": 1,
+          "prompt_tokens": 2254,
+          "completion_tokens": 2327,
+          "total_tokens": 4581
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemkyU92kgJPQ3oQsGGYe'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-FX",
+          "offending_component": "RATES_FX:GBP:RF-003",
+          "correct_im_amount": 271674.68,
+          "dispute_difference": 44290.45,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": false,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 29.6941,
+          "attempts": 1,
+          "prompt_tokens": 2254,
+          "completion_tokens": 3007,
+          "total_tokens": 5261
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CemqWYbFU5QUYHMbGe6mf'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "RATES_FX:GBP:RF-003",
+          "correct_im_amount": 271674.68,
+          "dispute_difference": 44290.45,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": false,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 28.3784,
+          "attempts": 1,
+          "prompt_tokens": 2254,
+          "completion_tokens": 2540,
+          "total_tokens": 4794
         }
       }
     ]
@@ -10950,41 +11128,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cen12XJk4RVF9PFApFwQe'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 93720.8,
+          "dispute_difference": 56008.78,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 3.0905,
+          "attempts": 1,
+          "prompt_tokens": 2259,
+          "completion_tokens": 331,
+          "total_tokens": 2590
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cen6gWQK8LabfYJkjVwXN'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 93720.8,
+          "dispute_difference": 56008.78,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 3.5209,
+          "attempts": 1,
+          "prompt_tokens": 2259,
+          "completion_tokens": 368,
+          "total_tokens": 2627
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenBU2EQLTY7HBJZ5u9Uu'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 93720.8,
+          "dispute_difference": 56008.78,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.7528,
+          "attempts": 1,
+          "prompt_tokens": 2259,
+          "completion_tokens": 230,
+          "total_tokens": 2489
         }
       }
     ]
@@ -10994,41 +11220,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenGUwegckjWz5E1i4mks'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 6157.49,
+          "dispute_difference": 24242.51,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 10.7778,
+          "attempts": 1,
+          "prompt_tokens": 2058,
+          "completion_tokens": 1044,
+          "total_tokens": 3102
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenSJidzARPmbjY2sdMce'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 6157.49,
+          "dispute_difference": 24242.51,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 14.3588,
+          "attempts": 1,
+          "prompt_tokens": 2058,
+          "completion_tokens": 1587,
+          "total_tokens": 3645
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenTp7hVEaXvoiYBtdK49'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "EQUITY:LARGE_CAP:RF-002",
+          "correct_im_amount": 6157.49,
+          "dispute_difference": 24242.51,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 15.7905,
+          "attempts": 1,
+          "prompt_tokens": 2058,
+          "completion_tokens": 1622,
+          "total_tokens": 3680
         }
       }
     ]
@@ -11038,41 +11312,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenU7wMPhtStGb44SXNrR'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "CREDIT:HY:RF-001,RF-002",
+          "correct_im_amount": 389149.82,
+          "dispute_difference": 389149.82,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 2.6764,
+          "attempts": 1,
+          "prompt_tokens": 1970,
+          "completion_tokens": 253,
+          "total_tokens": 2223
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenURmWoWuuJXG18HnGcP'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "CREDIT:HY:RF-001,RF-002",
+          "correct_im_amount": 389149.82,
+          "dispute_difference": 389149.82,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.6364,
+          "attempts": 1,
+          "prompt_tokens": 1970,
+          "completion_tokens": 135,
+          "total_tokens": 2105
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenUje74Vj9qsYeY928jY'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "CREDIT:HY:RF-001,RF-002",
+          "correct_im_amount": 389149.82,
+          "dispute_difference": 389149.82,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 4.4538,
+          "attempts": 1,
+          "prompt_tokens": 1970,
+          "completion_tokens": 420,
+          "total_tokens": 2390
         }
       }
     ]
@@ -11082,41 +11404,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenV3TxckeZ1nT9qD1TcV'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 534339.95,
+          "dispute_difference": 10686.8,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 5.1524,
+          "attempts": 1,
+          "prompt_tokens": 2614,
+          "completion_tokens": 517,
+          "total_tokens": 3131
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenVMJBkQPLriro8tg281'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 534339.95,
+          "dispute_difference": 10686.8,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.8511,
+          "attempts": 1,
+          "prompt_tokens": 2614,
+          "completion_tokens": 182,
+          "total_tokens": 2796
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenVf97o2a19R2nThYq7n'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 534339.95,
+          "dispute_difference": 10686.8,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 1.746,
+          "attempts": 1,
+          "prompt_tokens": 2614,
+          "completion_tokens": 169,
+          "total_tokens": 2783
         }
       }
     ]
@@ -11126,41 +11487,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenVxxteAHCrP4HDhFvB4'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 201635.98,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 10.9901,
+          "attempts": 1,
+          "prompt_tokens": 2343,
+          "completion_tokens": 1004,
+          "total_tokens": 3347
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenWGo4JV7Be89izRDX7P'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 201635.98,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 10.115,
+          "attempts": 1,
+          "prompt_tokens": 2343,
+          "completion_tokens": 1025,
+          "total_tokens": 3368
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenWacjCCmScX4HJKVeuo'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 201635.98,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 10.6498,
+          "attempts": 1,
+          "prompt_tokens": 2343,
+          "completion_tokens": 988,
+          "total_tokens": 3331
         }
       }
     ]
@@ -11170,41 +11570,80 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenWtRtqEhw91Kg51CiP8'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 960558.91,
+          "dispute_difference": 181.43,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 7.3722,
+          "attempts": 1,
+          "prompt_tokens": 2425,
+          "completion_tokens": 690,
+          "total_tokens": 3115
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenXCFuZgVRusdD4jZuMW'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 960558.91,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 9.4071,
+          "attempts": 1,
+          "prompt_tokens": 2425,
+          "completion_tokens": 881,
+          "total_tokens": 3306
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenXW5dvjQNzEtB8xXhgU'}"
+          "dispute_exists": false,
+          "primary_dispute_category": null,
+          "offending_component": null,
+          "correct_im_amount": 960558.91,
+          "dispute_difference": 0,
+          "should_escalate": false,
+          "escalation_target": null
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": false,
+          "detection_correct": true,
+          "is_clean": true,
+          "false_flag": false,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 7.3762,
+          "attempts": 1,
+          "prompt_tokens": 2425,
+          "completion_tokens": 671,
+          "total_tokens": 3096
         }
       }
     ]
@@ -11214,41 +11653,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenXouVyaRrp8Mpx4Ukay'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-METHODOLOGY",
+          "offending_component": "RATES_FX & CREDIT (risk weight set mismatch: firm used SIMM-style v2.6 matching published table; counterparty used unapproved v2.7 pre-release calibration)",
+          "correct_im_amount": 424298.32,
+          "dispute_difference": 127289.5,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": false,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 5.3607,
+          "attempts": 1,
+          "prompt_tokens": 2438,
+          "completion_tokens": 516,
+          "total_tokens": 2954
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenY7kLKg57xf8o6QfYHv'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-METHODOLOGY",
+          "offending_component": "ALL_RISK_CLASSES:RISK_WEIGHT_SET_MISMATCH (counterparty used v2.7 pre-release calibration instead of published SIMM-style v2.6 weights)",
+          "correct_im_amount": 424298.32,
+          "dispute_difference": 127289.5,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 12.2154,
+          "attempts": 1,
+          "prompt_tokens": 2438,
+          "completion_tokens": 1229,
+          "total_tokens": 3667
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenYRb6CXhnVHRAmjKxL2'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-METHODOLOGY",
+          "offending_component": "RATES_FX:GBP, RATES_FX:EUR, CREDIT:IG, CREDIT:HY (risk-weight set mismatch)",
+          "correct_im_amount": 424298.32,
+          "dispute_difference": 127289.5,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": false,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 10.3616,
+          "attempts": 1,
+          "prompt_tokens": 2438,
+          "completion_tokens": 1012,
+          "total_tokens": 3450
         }
       }
     ]
@@ -11258,41 +11745,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenYjQUjFnjC53dXu3VJ9'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "CREDIT:IG:RF-004,CREDIT:HY:RF-005,CREDIT:HY:RF-006",
+          "correct_im_amount": 451539.19,
+          "dispute_difference": 373112.41,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 4.3986,
+          "attempts": 1,
+          "prompt_tokens": 2389,
+          "completion_tokens": 467,
+          "total_tokens": 2856
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenZ3EMmt5KZYMYZ9xRoJ'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "CREDIT:IG:RF-004,CREDIT:HY:RF-005,CREDIT:HY:RF-006",
+          "correct_im_amount": 451539.19,
+          "dispute_difference": 373112.41,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 5.2814,
+          "attempts": 1,
+          "prompt_tokens": 2389,
+          "completion_tokens": 590,
+          "total_tokens": 2979
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenZM3o2tA2fQbxc4yCXD'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "CREDIT:IG:RF-004,CREDIT:HY:RF-005,RF-006",
+          "correct_im_amount": 451539.19,
+          "dispute_difference": 373112.41,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 4.3433,
+          "attempts": 1,
+          "prompt_tokens": 2389,
+          "completion_tokens": 409,
+          "total_tokens": 2798
         }
       }
     ]
@@ -11302,41 +11837,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenZf2XsxjhfjJn8YtMMc'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "RATES_FX:OTHER:RF-004",
+          "correct_im_amount": 208647.29,
+          "dispute_difference": 136512.16,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 6.2435,
+          "attempts": 1,
+          "prompt_tokens": 2572,
+          "completion_tokens": 673,
+          "total_tokens": 3245
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenZxtKXQzQMp7q8JSkLS'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-TRADEPOP",
+          "offending_component": "RATES_FX:OTHER:RF-004",
+          "correct_im_amount": 208647.29,
+          "dispute_difference": 136512.16,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 8.9376,
+          "attempts": 1,
+          "prompt_tokens": 2572,
+          "completion_tokens": 947,
+          "total_tokens": 3519
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenbnHp57RPrZw2L5Khx6'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-SENS",
+          "offending_component": "RATES_FX:OTHER:RF-004",
+          "correct_im_amount": 208647.29,
+          "dispute_difference": 136512.16,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": false,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 12.5323,
+          "attempts": 1,
+          "prompt_tokens": 2572,
+          "completion_tokens": 1280,
+          "total_tokens": 3852
         }
       }
     ]
@@ -11346,41 +11929,89 @@
     "runs": [
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cenc686RZ3SARcVyezUAh'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-BUCKET",
+          "offending_component": "CREDIT:RF-002",
+          "correct_im_amount": 668164.2,
+          "dispute_difference": 143424.25,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": false,
+          "value_correct": false,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 6.2845,
+          "attempts": 1,
+          "prompt_tokens": 2450,
+          "completion_tokens": 601,
+          "total_tokens": 3051
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CencPwTxv6vcLipLzmz1C'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-BUCKET",
+          "offending_component": "CREDIT:RF-002",
+          "correct_im_amount": 811588.45,
+          "dispute_difference": 143424.25,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": false,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 13.6126,
+          "attempts": 1,
+          "prompt_tokens": 2450,
+          "completion_tokens": 1358,
+          "total_tokens": 3808
         }
       },
       {
         "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CenjoKWE57tP9rq13VH92'}"
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-BUCKET",
+          "offending_component": "CREDIT:IG:RF-002",
+          "correct_im_amount": 811588.45,
+          "dispute_difference": 143424.25,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk / reference data (CRIF bucket classification) team"
         },
         "score": {
-          "error": true,
-          "detection_correct": false
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": false,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
         },
         "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
+          "latency_s": 93.53,
+          "attempts": 1,
+          "prompt_tokens": 2450,
+          "completion_tokens": 8686,
+          "total_tokens": 11136
         }
       }
     ]
@@ -11388,19 +12019,6 @@
   {
     "case_id": "AAL-D-007-137",
     "runs": [
-      {
-        "prediction": {
-          "_error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cenk79fe17yGuWC4rFTMV'}"
-        },
-        "score": {
-          "error": true,
-          "detection_correct": false
-        },
-        "telemetry": {
-          "latency_s": 0.0,
-          "attempts": 8
-        }
-      },
       {
         "prediction": {
           "dispute_exists": true,
@@ -11457,6 +12075,35 @@
           "prompt_tokens": 2336,
           "completion_tokens": 1954,
           "total_tokens": 4290
+        }
+      },
+      {
+        "prediction": {
+          "dispute_exists": true,
+          "primary_dispute_category": "IM-DIS-CRIF",
+          "offending_component": "CREDIT:IG:RF-002",
+          "correct_im_amount": 224444.65,
+          "dispute_difference": 203228.99,
+          "should_escalate": true,
+          "escalation_target": "IM disputes desk"
+        },
+        "score": {
+          "error": false,
+          "gt_disputed": true,
+          "detection_correct": true,
+          "is_clean": false,
+          "category_correct": true,
+          "component_correct": true,
+          "value_correct": true,
+          "difference_correct": true,
+          "escalation_correct": true
+        },
+        "telemetry": {
+          "latency_s": 61.1481,
+          "attempts": 1,
+          "prompt_tokens": 2336,
+          "completion_tokens": 5439,
+          "total_tokens": 7775
         }
       }
     ]
