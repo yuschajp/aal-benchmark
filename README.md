@@ -31,3 +31,7 @@ Code is MIT licensed (see `LICENSE`). Datasets are licensed CC BY 4.0 (see `DATA
 ## Contact
 
 joe@aialphalabs.ai
+
+## AAL-D-007 v1.2 flip rate (eval_out_d007_v12)
+
+Note: `eval_out_d007_v12/flip_rate_d007_v12.json`: dataset field set to v1.2 by hand after an unchanged script run (script has no label argument). The scorer version `d007-flip-v1.1.0` is correct because the script didn't change. The file holds v1.2 results, not v1.1.
