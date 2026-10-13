@@ -2,14 +2,14 @@
   "scorer_version": "d007-score-v1.0.0",
   "n_cases": 250,
   "n_runs_total": 750,
-  "n_errors": 253,
+  "n_errors": 0,
   "detection_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 497,
-      "hits": 497,
+      "n": 750,
+      "hits": 750,
       "wilson_95": [
-        0.9923,
+        0.9949,
         1.0
       ]
     }
@@ -17,54 +17,54 @@
   "false_flag_rate": {
     "pooled": {
       "accuracy": 0.0,
-      "n": 196,
+      "n": 264,
       "hits": 0,
       "wilson_95": [
         0.0,
-        0.0192
+        0.0143
       ]
     }
   },
   "category_accuracy": {
     "pooled": {
-      "accuracy": 0.6412,
-      "n": 301,
-      "hits": 193,
+      "accuracy": 0.6502,
+      "n": 486,
+      "hits": 316,
       "wilson_95": [
-        0.5855,
-        0.6933
+        0.6068,
+        0.6913
       ]
     }
   },
   "component_accuracy": {
     "pooled": {
-      "accuracy": 0.6478,
-      "n": 301,
-      "hits": 195,
+      "accuracy": 0.6626,
+      "n": 486,
+      "hits": 322,
       "wilson_95": [
-        0.5923,
-        0.6996
+        0.6194,
+        0.7032
       ]
     }
   },
   "value_accuracy": {
     "pooled": {
-      "accuracy": 0.8106,
-      "n": 301,
-      "hits": 244,
+      "accuracy": 0.8251,
+      "n": 486,
+      "hits": 401,
       "wilson_95": [
-        0.7626,
-        0.8509
+        0.7888,
+        0.8563
       ]
     }
   },
   "difference_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 301,
-      "hits": 301,
+      "n": 486,
+      "hits": 486,
       "wilson_95": [
-        0.9874,
+        0.9922,
         1.0
       ]
     }
@@ -72,10 +72,10 @@
   "escalation_accuracy": {
     "pooled": {
       "accuracy": 1.0,
-      "n": 497,
-      "hits": 497,
+      "n": 750,
+      "hits": 750,
       "wilson_95": [
-        0.9923,
+        0.9949,
         1.0
       ]
     }
@@ -88,19 +88,19 @@
   "performance": {
     "n_timed": 750,
     "latency_s": {
-      "p50": 5.955,
-      "p95": 22.038,
-      "mean": 7.28,
+      "p50": 8.696,
+      "p95": 26.259,
+      "mean": 11.654,
       "max": 100.215,
-      "total": 5459.9
+      "total": 8740.2
     },
     "tokens": {
-      "prompt_mean": 1890.0,
-      "completion_mean": 99.6,
-      "reasoning_mean": 1201.7,
-      "prompt_total": 945025,
-      "completion_total": 49805
+      "prompt_mean": 1878.7,
+      "completion_mean": 100.5,
+      "reasoning_mean": 1296.3,
+      "prompt_total": 1409001,
+      "completion_total": 75409
     },
-    "attempts_mean": 2.705
+    "attempts_mean": 1.039
   }
 }
