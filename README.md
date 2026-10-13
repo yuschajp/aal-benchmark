@@ -16,6 +16,7 @@ Set an API key for the provider you want to test, then run the driver for the da
 
 ## Known limitations
 
+- Currency-unit labels and amounts corrected on 2026-10-12 in AAL-D-002 v1.0.2 (case 146), AAL-D-003 v1.0.3 (47 EUR-exposure cases relabelled, values unchanged) and AAL-D-005 v1.0.1 (cases 158–162); see `datasets/FX-UNIT-CORRECTIONS-2026-10-12.md`.
 - Cases are generated to model real operations workflows. They are not drawn from live trade records.
 - Several parameters are assumptions, disclosed on each dataset page.
 - Model results depend on how the model is served. See the AAL-D-008 page on host reasoning defaults.
