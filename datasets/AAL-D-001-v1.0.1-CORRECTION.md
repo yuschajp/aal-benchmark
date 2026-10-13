@@ -1,9 +1,12 @@
 # AAL-D-001 v1.0.1: FX forward exposure correction (2026-10-12)
 
 ## What was wrong
-In AAL-D-001 v1.0, 9 of the 12 FX-forward cases with a forward-rate break recorded `total_exposure_usd` as notional × rate difference without converting it to USD. On these USD/xxx pairs the rate difference is in the quote currency (KRW, JPY, BRL, CHF, CAD), so the key held a quote-currency amount labelled as USD. The 3 xxx/USD cases (AUD, EUR) were already correct and are unchanged.
+In AAL-D-001 v1.0, 11 FX-forward cases recorded `total_exposure_usd` in a foreign currency labelled as USD:
 
-For the later evaluation runs, the prompt in our run scripts contained the same unit error (it told models to use notional × rate difference and not to invert or divide), and these runs' answers are consistent with it.
+- **9 forward-rate breaks** on USD/xxx pairs, where the key held notional × rate difference without converting it to USD. The rate difference is in the quote currency (KRW, JPY, BRL, CHF, CAD). The 3 xxx/USD forward-rate cases (AUD, EUR) were already correct and are unchanged.
+- **2 notional breaks** on xxx/USD pairs (cases 148 and 178), where the key held the notional gap in EUR or AUD as if it were USD.
+
+For the later evaluation runs, the prompt in our run scripts contained the same unit error (it told models to use notional × rate difference and not to invert or divide). The prompt's notional line had the same error: it told models to report the notional difference itself, with no multiplication, so a EUR or AUD gap was reported as USD. These runs' answers are consistent with both lines.
 
 ## Corrected values
 | Case | Instrument | Old key (USD) | New key (USD, internal-rate conversion) | Also accepted (counterparty-rate conversion) | Accepted range (USD) |
@@ -18,15 +21,22 @@ For the later evaluation runs, the prompt in our run scripts contained the same 
 | AAL-D-001-174 | USD/KRW NDF 1M | 2,400,000.00 | 1,741.65 | 1,741.28 | 1,740.28 – 1,742.65 |
 | AAL-D-001-175 | USD/BRL NDF 2M | 30,000.00 | 5,484.46 | 5,479.45 | 5,478.45 – 5,485.46 |
 
+Notional breaks. The gap is converted at the trade's own forward rate. Counterparty and internal rates are the same, so there is no second conversion and no accepted range:
+
+| Case | Instrument | Notional gap | Old key (USD) | New key (USD) |
+|---|---|---|---|---|
+| AAL-D-001-148 | EUR/USD FWD 1M | €500,000 | 500,000.00 | 542,500.00 (× 1.085) |
+| AAL-D-001-178 | AUD/USD FWD 1M | A$600,000 | 600,000.00 | 396,600.00 (× 0.661) |
+
 No other field or case changed, apart from `benchmark_version` (now `1.0.1`) and each corrected case's `version_history`. v1.0 is kept in `datasets/` so earlier published figures can be reproduced.
 
 ## Conversion convention
-The new key converts the quote-currency difference to USD at the **internal forward rate**: `USD notional × |counterparty rate − internal rate| / internal forward rate`. This is **AAL's own convention** for scoring a confirmation break. It is not prescribed by ISDA.
+For forward-rate breaks, the new key converts the quote-currency difference to USD at the **internal forward rate**: `USD notional × |counterparty rate − internal rate| / internal forward rate`. This is **AAL's own convention** for scoring a confirmation break. It is not prescribed by ISDA.
 
 As background only: the ISDA 1998 FX and Currency Option Definitions give the non-deliverable settlement amount as Notional × (1 − Forward Rate / Settlement Rate), which divides the rate gap by the rate on the other side of the comparison. See the [User's Guide to the 1998 FX and Currency Option Definitions](https://www.sc.com/en/uploads/sites/66/content/docs/Users-Guide-to-the-1998-FX-and-Currency-Option-Definitions.pdf) and the [2011 amendments (NY Fed FXC)](https://www.newyorkfed.org/medialibrary/microsites/fxc/files/2011/fxc060811b.pdf).
 
 ## Scoring tolerance
-Scoring accepts any exposure between the internal-rate and the counterparty-rate conversions, ± $1. Each corrected case carries this band in `ground_truth.primary_exception.total_exposure_usd_accepted_range`.
+Scoring accepts any exposure between the internal-rate and the counterparty-rate conversions, ± $1. Each corrected forward-rate case carries this band in `ground_truth.primary_exception.total_exposure_usd_accepted_range`.
 
 ## Example
 Case AAL-D-001-147: USD/KRW NDF, $8,000,000 notional, counterparty 1,377.95 vs internal 1,378.00, a 0.05 KRW difference. The v1.0 key recorded 400,000 (KRW, labelled USD). The corrected key is 8,000,000 × 0.05 / 1,378.00 = $290.28, and $290.29 (at the counterparty rate) is also accepted. Models that answered $290.28 were correct.

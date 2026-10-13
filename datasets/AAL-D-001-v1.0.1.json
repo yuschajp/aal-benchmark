@@ -12414,7 +12414,7 @@
         "internal_value": 10000000,
         "difference": 500000,
         "difference_unit": "notional",
-        "total_exposure_usd": 500000.0
+        "total_exposure_usd": 542500.0
       },
       "secondary_exception": null,
       "recommended_action": "Notional break on EUR/USD FWD 1M. fx forward notional differs by 500,000. Material economic mismatch — escalate; do not affirm.",
@@ -12452,6 +12452,11 @@
         "version": "1.0",
         "date": "2026-07",
         "change": "Initial"
+      },
+      {
+        "version": "1.0.1",
+        "date": "2026-10-12",
+        "change": "total_exposure_usd corrected from 500,000.00 to 542,500.00: the notional gap (EUR 500,000) is in the foreign currency and was recorded as USD. Now converted at the trade's forward rate (1.085); counterparty and internal rates are the same, so no accepted range is needed."
       }
     ]
   },
@@ -15136,7 +15141,7 @@
         "internal_value": 12000000,
         "difference": 600000,
         "difference_unit": "notional",
-        "total_exposure_usd": 600000.0
+        "total_exposure_usd": 396600.0
       },
       "secondary_exception": null,
       "recommended_action": "Notional break on AUD/USD FWD 1M. fx forward notional differs by 600,000. Material economic mismatch — escalate; do not affirm.",
@@ -15174,6 +15179,11 @@
         "version": "1.0",
         "date": "2026-07",
         "change": "Initial"
+      },
+      {
+        "version": "1.0.1",
+        "date": "2026-10-12",
+        "change": "total_exposure_usd corrected from 600,000.00 to 396,600.00: the notional gap (AUD 600,000) is in the foreign currency and was recorded as USD. Now converted at the trade's forward rate (0.661); counterparty and internal rates are the same, so no accepted range is needed."
       }
     ]
   },
